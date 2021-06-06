@@ -29,7 +29,7 @@ $(document).ready(function () {
 		$(".tab-one-list").removeClass("tab-hidden");
 		$(".page-holder-two").addClass("tab-hidden");
 		$(".page-holder-one").removeClass("tab-hidden");
-$(".tab-three".removeClass("active");
+$(".tab-three").removeClass("active");
 	
 		$(".page-holder-three").addClass("tab-hidden");
 		$(".tab-three-list").addClass("tab-hidden");
@@ -41,7 +41,7 @@ $(".tab-three".removeClass("active");
 		$(".tab-two-list").removeClass("tab-hidden");
 		$(".page-holder-one").addClass("tab-hidden");
 		$(".page-holder-two").removeClass("tab-hidden");
-	$(".tab-three".removeClass("active");
+	$(".tab-three").removeClass("active");
 	
 		$(".page-holder-three").addClass("tab-hidden");
 		$(".tab-three-list").addClass("tab-hidden");
@@ -53,7 +53,7 @@ $(".tab-three".removeClass("active");
 		$(".tab-two-list").addClass("tab-hidden");
 		$(".page-holder-one").addClass("tab-hidden");
 		$(".page-holder-two").addClass("tab-hidden");
-	$(".tab-three".addClass("active");
+	$(".tab-three").addClass("active");
 	
 		$(".page-holder-three").removeClass("tab-hidden");
 		$(".tab-three-list").removeClass("tab-hidden");
