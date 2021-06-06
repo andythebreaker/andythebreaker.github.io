@@ -1,7 +1,10 @@
-# Blog of Song Kong
-This is a Jekyll theme called Ice bear.
+# Blog of andythebreaker
 
-To learn how to install and use this theme, please check out the [installation guide](http://ikongsong.com/blog/ice-bear-jekyll-theme/) for more information.
+the master branch is to put history files.(history version of this gh-pages)
 
-## License
-This theme is open source under MIT License. So feel free to use this Jekyll theme on your site, although linking back to me is more than welcomed.
+go to [my blog](http://andythebreaker.me) for more info.
+
+## forked from
+
+[Jekyll theme - Ice bear](http://kongsong.me/blog/ice-bear-jekyll-theme/)
+
