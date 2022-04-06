@@ -4,11 +4,11 @@ var bcrypt = require('bcryptjs');
 //mongoose.connect('mongodb://andythebreaker:iuhihcuw@140.116.132.223:27017/petdatabase_dev', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
 //var db = mongoose.connection;
 const mongoDBuserName = "linjsing";
-const mongoDBpsw = process.env.linjsing;
+const mongoDBpsw = process.env.y1cloud3fridq11;
 const mongoDBdataBaseName = "maindb";
 //console.log(mongoDBpsw);
 //mongodb+srv://linjsing:<password>@cluster0.iupxg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
-const uri = process.env.DBurl||`mongodb+srv://${mongoDBuserName}:${mongoDBpsw}@cluster0.iupxg.mongodb.net/${mongoDBdataBaseName}?retryWrites=true&w=majority`;
+const uri = process.env.DBurl||`mongodb+srv://${mongoDBuserName}:${mongoDBpsw}@cluster0.fn3m1.mongodb.net/${mongoDBdataBaseName}?retryWrites=true&w=majority`;
 mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 //console.log("WTF???");
 

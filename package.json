@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node -r mjs-require -r dotenv/config ./bin/wwwcopy.mjs dotenv_config_path=./.env",
-    "test": "ABLE_NEW_ACCOUNT='yes' node -r mjs-require -r dotenv/config ./bin/wwwcopy.mjs dotenv_config_path=./.env",
+    "start": "node -r mjs-require ./bin/wwwcopy.mjs",
+    "test": "ABLE_NEW_ACCOUNT='yes' node -r mjs-require ./bin/wwwcopy.mjs",
     "minify:js": "browserify ./public/javascripts/snapshoot.js -o ./public/bundle/snapshoot_f.js && uglifyjs ./public/bundle/snapshoot_f.js -o ./public/bundle/snapshoot.js",
     "watch": "watchify ./public/javascripts/snapshoot.js -o ./public/bundle/snapshoot_f.js --debug --verbose",
     "postinstall": "node ./public/js/createFolderIfNotExist.js && symdeps",
