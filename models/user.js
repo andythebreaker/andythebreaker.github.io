@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 //mongoose.connect('mongodb://andythebreaker:iuhihcuw@140.116.132.223:27017/petdatabase_dev', { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true });
 //var db = mongoose.connection;
-const mongoDBuserName = "linjsing";
+const mongoDBuserName = "y1cloud3fridq11";
 const mongoDBpsw = process.env.y1cloud3fridq11;
 const mongoDBdataBaseName = "maindb";
 //console.log(mongoDBpsw);
