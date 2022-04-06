@@ -1,22 +1,9 @@
-# LibraryOfficialWebsite
+# my website
 
-ncku math LibraryOfficialWebsite
+## this repo. is copied from
 
-## stataus
+[here!](https://github.com/gyrotaroload/LibraryOfficialWebsite)
 
-good
+## add admin user of CMS
 
-## barnch
-
-edit:master
-pub:main(GY)
-
-## how to run 
-
-set DEBUG=libraryofficialwebsite:* & npm start
-
-## heroku
-
-ensure that your application is using the heroku/nodejs buildpack
-
-TODO:後端的清單式列表,new book page activate items,pug var bolol markdown-latex, TODO https://www.npmjs.com/package/express-minify-html
+if UR running in windows environment, instead of running `npm start`, use `set ABLE_NEW_ACCOUNT=yes&&node -r mjs-require ./bin/wwwcopy.mjs`.
