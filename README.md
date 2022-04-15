@@ -9,3 +9,9 @@
 ## add admin user of CMS
 
 if UR running in windows environment, instead of running `npm start`, use `set ABLE_NEW_ACCOUNT=yes&&node -r mjs-require ./bin/wwwcopy.mjs`.
+
+## The memo is for myself
+
+- heroku use maybe "pk3", AF "e2@gs.nk.e"
+- mongodb use 500m cloud, "pk3" google
+- BN acc-psw, REC@fb
