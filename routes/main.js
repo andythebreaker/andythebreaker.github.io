@@ -185,7 +185,7 @@ router.get('/home', ensureAuthenticated, function (req, res, next) {//這個東�
     swipe_edit.getList(r => {
         least.frontend((stuff) => {
             res.render('index', {
-                title: '成大數學系圖書館',
+                title: 'andythebreaker_BLOG',
                 functionButtonMainText1: '新書入庫',
                 functionButtonMainText2: '期刊服務',
                 functionButtonMainText3: '館際合作',
@@ -535,7 +535,7 @@ router.get('/journals', ensureAuthenticated, function (req, res, next) {
      * alpha參數，若為
      */
     res.render('dashboard', {
-        title: '成大數學系圖書館',
+        title: 'andythebreaker_BLOG',
         isUSER: 'no',
         jjsonURL: (req.query.alpha) ? ("/jjson?alpha=" + req.query.alpha) : "/jjson",
         a2z: generator('@', ['A-Z']),

@@ -53,7 +53,7 @@ router.get('/', function (req, res, next) {
         least.frontend((stuff) => {
           //console.log(c);console.log(numberArray(c));
           var homeinfo = {
-            title: '成大數學系圖書館',
+            title: 'andythebreaker_BLOG',
             functionButtonMainText1: '新書入庫',
             functionButtonMainText2: '期刊服務',
             functionButtonMainText3: '館際合作',
@@ -76,7 +76,7 @@ router.get('/', function (req, res, next) {
 
 router.get('/journals', function (req, res, next) {
   var journalinfo = {
-    title: '成大數學系圖書館',
+    title: 'andythebreaker_BLOG',
     isUSER: 'yes',
     jjsonURL: (req.query.alpha) ? ("/jjson?alpha=" + req.query.alpha) : "/jjson",
     a2z: genCharArray('A', 'Z'),
@@ -343,7 +343,7 @@ router.get('/inner', function (req, res, next) {
               title: 'interlibraryCooperation',
               ExternalLargeButtonName: "外部連結",
               urls: null,//TODO添加近期URL
-              ttp: "成大數學系圖書館",//公告
+              ttp: "andythebreaker_BLOG",//公告
               tp: "館際合作服務",
               alpha: { txt: "回首頁", uri: `/` },
               moment: moment,
@@ -479,7 +479,7 @@ router.get('/interlibraryCooperation', function (req, res, next) {
     title: 'interlibraryCooperation',
     ExternalLargeButtonName: "外部連結",
     urls: null,//TODO添加近期URL
-    ttp: "成大數學系圖書館",//公告
+    ttp: "andythebreaker_BLOG",//公告
     tp: "館際合作服務",
     alpha: { txt: "回首頁", uri: `/` },
     moment: moment,
