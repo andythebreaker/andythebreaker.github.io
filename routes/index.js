@@ -38,7 +38,7 @@ var mp4id = require('../models/mp4index');
 
 var header_link = {
   browseHyperlinkedObjectsHorizontally1T: '成大首頁',
-  browseHyperlinkedObjectsHorizontally2T: '數學系網站',
+  browseHyperlinkedObjectsHorizontally2T: 'XXX這裡需要維護XXX',
   browseHyperlinkedObjectsHorizontally3T: '成大總圖',
   browseHyperlinkedObjectsHorizontally1L: 'https://www.ncku.edu.tw/',
   browseHyperlinkedObjectsHorizontally2L: 'http://www.math.ncku.edu.tw/',
