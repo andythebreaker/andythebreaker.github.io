@@ -1,7 +1,7 @@
 import React/*, { Component, useState }*/ from "react";
 import AppSubMain from './AppSubMain';
 import { Tfmd } from "./Tfmd.js";
-import {BackToTop} from "./component/backtotop.jsx"
+import { BackToTop } from "./component/backtotop.jsx"
 import "./css/backtotop.css";
 import Webcam from "react-webcam";
 import "./css/appMain.css"
@@ -11,41 +11,65 @@ import "./css/appMain.css"
   height: 720,
 };*/
 //videoConstraints={videoConstraints}
-export class AppMain extends React.Component {
+export function AppMain(props) {
 
-  componentDidMount() {
-    console.log("AppMain.componentDidMount");
-    //var mainuiwindows=document.getElementsByClassName("Sw222")[0];//you can only have one of this!!!
-    //console.log(mainuiwindows);
-  }
+  const [/*deviceId*/, /*setDeviceId*/] = React.useState({});
+  const [devices, setDevices] = React.useState([]);
 
-  render() {
-    return (<div className="fullpage">
-      <AppSubMain />
-      <Webcam
-        audio={false}
-        height={720}
-        screenshotFormat="image/jpeg"
-        width={1280}
-      >
-        {({ getScreenshot }) => (
-          <button
-            onClick={() => {
-              const imageSrc = getScreenshot();
-              //console.log(imageSrc);
-              //TODO
-              //this.setState({ preview: imageSrc });
-              document.getElementById("cvstart0BTON").innerText = imageSrc;
-              document.getElementById("cvstart0BTON").click();
-            }}
+  const handleDevices = React.useCallback(
+    mediaDevices =>
+      setDevices(mediaDevices.filter(({ kind }) => kind === "videoinput")),
+    [setDevices]
+  );
+
+  React.useEffect(
+    () => {
+      navigator.mediaDevices.enumerateDevices().then(handleDevices);
+    },
+    [handleDevices]
+  );
+
+  //render() {
+  return (<div className="fullpage">
+    <AppSubMain />
+    <>
+      {devices.map((device, key) => (
+        <div key={key}>
+          {device.label || `Device ${key + 1}`}
+          <Webcam
+            audio={false}
+            videoConstraints={{ deviceId: device.deviceId }}
+            height={720}
+            screenshotFormat="image/jpeg"
+            width={1280}
           >
-            Capture photo
-          </button>
-        )}
-      </Webcam>
-      <Tfmd ftmdg="ncb" />
-      <Tfmd ftmdg="wcb" />
-      <BackToTop />
-    </div>);
-  }
+            {({ getScreenshot }) => (
+              <button
+                onClick={() => {
+                  const imageSrc = getScreenshot();
+                  //console.log(imageSrc);
+                  //TODO
+                  //this.setState({ preview: imageSrc });
+                  document.getElementById("cvstart0BTON").innerText = imageSrc;
+                  document.getElementById("cvstart0BTON").click();
+                }}
+                onLoadedMetadata={() => {
+                  console.log("load metadata");
+                }}
+                onPlay={() => {
+                  console.log("on play~~");
+                }}
+              >
+                Capture photo
+              </button>
+            )}
+          </Webcam>
+        </div>
+      ))}
+    </>
+    <Tfmd ftmdg="ncb" />
+    <Tfmd ftmdg="wcb" />
+    <BackToTop />
+  </div>);
+  //}
 }
