@@ -26,11 +26,15 @@ export class UiPhone extends React.Component {
             MySwal.fire({
               position: 'bottom',
               allowOutsideClick: false,
-              background:'#ffffff00',
-              backdrop:'none',
+              background: '#ffffff00',
+              backdrop: 'none',
+              //showDenyButton: true,//TODO no use default bton
+              //showCancelButton: true,
+              //confirmButtonText: '快門',
+              //denyButtonText: `重置`,
               title: <p className='glow'>teststring</p>,
               html: `<h6 class="TimepickerusingSwiperjs glow">{"L0":4,"L0":8,"L0":7,"L0":10}</h6>
-                <div class="picker arrows">
+                <div class="picker arrows glow">
                   <div class="swiper-container hours">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">0</div>
@@ -113,15 +117,16 @@ export class UiPhone extends React.Component {
                       //var flowbubble=document.createElement('div');
                       //flowbubble.classList.add('rmsw2fb');
                       //flowbubble.innerHTML=document.getElementsByClassName('back-to-top')[0].outerHTML;
-                      var mainFPU=document.getElementsByClassName('back-to-top')[0];
+                      var mainFPU = document.getElementsByClassName('back-to-top')[0];
                       var fpu = document.getElementsByClassName('fpu');
                       //for (let index = 0; index < fpu.length; index++) {
                       //const elementfpu = fpu[index];
                       //elementfpu//...
                       //}
                       fpu[0].innerHTML = mainFPU.outerHTML;
-                      fpu[0].getElementsByTagName('button')[0].addEventListener('click',()=>{
+                      fpu[0].getElementsByTagName('button')[0].addEventListener('click', () => {
                         mainFPU.click();
+                        //TODO這裡感覺也不用切換了
                       });
                     }
                   }, delayInMilliseconds);
@@ -130,11 +135,17 @@ export class UiPhone extends React.Component {
                 document
                   .getElementById("not_react_comp_time_swipe_init")
                   .click();
-                MySwal.showLoading();
+                //MySwal.showLoading();
               },
             }).then(() => {
               //return MySwal.fire(<p>Shorthand works too</p>);
-              document.getElementById("root").style.overflow = "scroll";
+              //if (result.isConfirmed) {
+                //Swal.fire('Saved!', '', 'success')
+              //} else if (result.isDenied) {
+                //Swal.fire('Changes are not saved', '', 'info')
+              //}else{
+                document.getElementById("root").style.overflow = "scroll";
+              //}
             });
           }}
         >
