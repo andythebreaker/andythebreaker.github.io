@@ -14,7 +14,7 @@ import "./css/webcam.css"
 //videoConstraints={videoConstraints}
 export function AppMain(props) {
 
-  const [/*deviceId*/, /*setDeviceId*/] = React.useState({});
+  const [deviceId, /*setDeviceId*/] = React.useState({});
   const [devices, setDevices] = React.useState([]);
 
   const handleDevices = React.useCallback(
@@ -70,7 +70,7 @@ export function AppMain(props) {
     </>
     <Tfmd ftmdg="ncb" />
     <Tfmd ftmdg="wcb" />
-    <BackToTop />
+    <BackToTop ocf={()=>{console.log("pink button")}}/>
   </div>);
   //}
 }

@@ -24,6 +24,8 @@ export class UiPhone extends React.Component {
           className="Sw222"
           onClick={() => {
             MySwal.fire({
+              position: 'bottom',
+              allowOutsideClick: false,
               title: <p>teststring</p>,
               html: `<h6 class="TimepickerusingSwiperjs">{"L0":4,"L0":8,"L0":7,"L0":10}</h6>
                 <div class="picker arrows">
@@ -92,11 +94,37 @@ export class UiPhone extends React.Component {
                 </div>
                   <div class="vizor" ></div>
                 <button id="not_react_comp_time_swipe_init" style="display:none;" onclick="swipeadd()"></button>
+                <div class="fpu"></div>
                 </div>
                 `,
               showCloseButton: true,
               didOpen: () => {
                 // `MySwal` is a subclass of `Swal` with all the same instance & static methods
+                var delayInMilliseconds = 10000; //10 second
+                function back_to_top() {
+                  setTimeout(function () {
+                    //your code to be executed after 10 second
+                    if (document.getElementsByClassName('back-to-top').length === 0) {
+                      back_to_top();
+                    }
+                    else {
+                      //var flowbubble=document.createElement('div');
+                      //flowbubble.classList.add('rmsw2fb');
+                      //flowbubble.innerHTML=document.getElementsByClassName('back-to-top')[0].outerHTML;
+                      var mainFPU=document.getElementsByClassName('back-to-top')[0];
+                      var fpu = document.getElementsByClassName('fpu');
+                      //for (let index = 0; index < fpu.length; index++) {
+                      //const elementfpu = fpu[index];
+                      //elementfpu//...
+                      //}
+                      fpu[0].innerHTML = mainFPU.outerHTML;
+                      fpu[0].getElementsByTagName('button')[0].addEventListener('click',()=>{
+                        mainFPU.click();
+                      });
+                    }
+                  }, delayInMilliseconds);
+                }
+                back_to_top();
                 document
                   .getElementById("not_react_comp_time_swipe_init")
                   .click();
@@ -104,7 +132,7 @@ export class UiPhone extends React.Component {
               },
             }).then(() => {
               //return MySwal.fire(<p>Shorthand works too</p>);
-              document.getElementById("root").style.overflow="scroll";
+              document.getElementById("root").style.overflow = "scroll";
             });
           }}
         >

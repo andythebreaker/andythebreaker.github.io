@@ -4,7 +4,8 @@ import styled from "styled-components";
 const Button = styled.button({
   fontSize: "5px",
   position: "fixed",
-  top: "89vh",
+  //top: "89vh",//bottom
+  top: "0vh",
   left: "89vw",
   margin: "1vh 1vh 1vw 1vw",
   borderRadius: "90%",
@@ -14,27 +15,31 @@ const Button = styled.button({
   cursor: "pointer",
   outline: "none",
   background: "#ffc0cb",
-  height: "10vh",
-  width: "10vw",
+  height: "8em",
+  width: "8em",
 });
 
 export class BackToTop extends PureComponent {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+    onclickFucn:props.ocf
+    }
+  }
+
   state = {
     isAtRange: false,
-  };
-
-  moveToTop = () => {
-    console.log("ONCLICK");
   };
 
   render() {
     return (
       <Button
         className="back-to-top"
-        onClick={this.moveToTop}
+        onClick={this.state.onclickFucn}
         style={this.props.style}
       >
-        {this.props.children || "UI"}
+        {this.props.children || "切換鏡頭"}
       </Button>
     );
   }
