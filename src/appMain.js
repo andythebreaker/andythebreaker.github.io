@@ -5,6 +5,7 @@ import { BackToTop } from "./component/backtotop.jsx"
 import "./css/backtotop.css";
 import Webcam from "react-webcam";
 import "./css/appMain.css"
+import "./css/webcam.css"
 
 /*const videoConstraints = {
   width: 1280,
@@ -37,11 +38,11 @@ export function AppMain(props) {
         <div key={key}>
           {device.label || `Device ${key + 1}`}
           <Webcam
+          className="webcamcss"
             audio={false}
             videoConstraints={{ deviceId: device.deviceId }}
-            height={720}
             screenshotFormat="image/jpeg"
-            width={1280}
+            width={window.innerWidth}
           >
             {({ getScreenshot }) => (
               <button
