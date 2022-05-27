@@ -38,7 +38,7 @@ export function AppMain(props) {
         <div key={key}>
           {device.label || `Device ${key + 1}`}
           <Webcam
-          className="webcamcss"
+          className="webcamcss webcamMain"
             audio={false}
             videoConstraints={{ deviceId: device.deviceId }}
             screenshotFormat="image/jpeg"

@@ -26,8 +26,10 @@ export class UiPhone extends React.Component {
             MySwal.fire({
               position: 'bottom',
               allowOutsideClick: false,
-              title: <p>teststring</p>,
-              html: `<h6 class="TimepickerusingSwiperjs">{"L0":4,"L0":8,"L0":7,"L0":10}</h6>
+              background:'#ffffff00',
+              backdrop:'none',
+              title: <p className='glow'>teststring</p>,
+              html: `<h6 class="TimepickerusingSwiperjs glow">{"L0":4,"L0":8,"L0":7,"L0":10}</h6>
                 <div class="picker arrows">
                   <div class="swiper-container hours">
                     <div class="swiper-wrapper">
