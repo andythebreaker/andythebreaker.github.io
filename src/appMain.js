@@ -14,7 +14,7 @@ import "./css/webcam.css"
 //videoConstraints={videoConstraints}
 export function AppMain(props) {
 
-  const [deviceId, /*setDeviceId*/] = React.useState({});
+  const [/*deviceId*/, /*setDeviceId*/] = React.useState({});
   const [devices, setDevices] = React.useState([]);
 
   const handleDevices = React.useCallback(
