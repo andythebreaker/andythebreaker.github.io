@@ -2,7 +2,7 @@ import React from "react";
 //import ReactDOM from "react-dom";
 import MagicDropzone from "react-magic-dropzone";
 //import { ci } from 'case-insensitive';
-
+import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
 import "./styles.css";
 const tf = require('@tensorflow/tfjs');
 
@@ -26,14 +26,17 @@ export class Tfmd extends React.Component {
   state = {
     model: null,
     preview: "",
-    predictions: []
+    predictions: [],
+    lf: "0vw",
+    x1x2y1y2: [],//{x1:0.0,x2:0.0,y1:0.0,y2:0.0,},
   };
 
   componentDidMount() {
 
-    tf.loadGraphModel("/ftmdg/"+this.props.ftmdg+weights).then(model => {
+    tf.loadGraphModel("/ftmdg/" + this.props.ftmdg + weights).then(model => {
       this.setState({
-        model: model
+        model: model,
+        lf: this.props.lf,
       });
     });
   }
@@ -75,7 +78,7 @@ export class Tfmd extends React.Component {
     var ctx = null;
     //if (ci(e.target.tagName).equals('IMG')) {
     //c = document.getElementById("canvas");
-    c=this.canvasB;//TODO:check this
+    c = this.canvasB;//TODO:check this
     ctx = c.getContext("2d");
     this.cropToCanvas(e.target, c, ctx);
     //} else {
@@ -105,14 +108,21 @@ export class Tfmd extends React.Component {
       var i;
       for (i = 0; i < valid_detections_data; ++i) {
         let [x1, y1, x2, y2] = boxes_data.slice(i * 4, (i + 1) * 4);
+        var tmpxxyy1122 = { org: { x1: x1, x2: x2, y1: y1, y2: y2, }, mut: {}, klass: "n/a", score: "n/a" }
         x1 *= c.width;
         x2 *= c.width;
         y1 *= c.height;
         y2 *= c.height;
+        var tmpxxyy = this.state.x1x2y1y2;
+        tmpxxyy1122["mut"] = { x1: x1, x2: x2, y1: y1, y2: y2, };
+
         const width = x2 - x1;
         const height = y2 - y1;
         const klass = names[classes_data[i]];
         const score = scores_data[i].toFixed(2);
+
+        tmpxxyy1122["klass"] = klass;
+        tmpxxyy1122["score"] = score;
 
         // Draw the bounding box.
         ctx.strokeStyle = "#00FFFF";
@@ -125,6 +135,10 @@ export class Tfmd extends React.Component {
         const textHeight = parseInt(font, 10); // base 10
         ctx.fillRect(x1, y1, textWidth + 4, textHeight + 4);
 
+        tmpxxyy.push(tmpxxyy1122);
+        this.setState({
+          x1x2y1y2: tmpxxyy,
+        });
       }
       for (i = 0; i < valid_detections_data; ++i) {
         let [x1, y1, ,] = boxes_data.slice(i * 4, (i + 1) * 4);
@@ -145,12 +159,14 @@ export class Tfmd extends React.Component {
     return (
       <div className="CamPlusTf">
         <h3>{this.props.ftmdg}</h3>
-        <button onClick={() => {
-          var rii = document.getElementsByClassName('WCWC')[1];
-          var riiurl = rii.toDataURL('image/jpeg');
-          console.log(riiurl);
-          this.setState({ preview: riiurl });
-        }}>TTTF</button>
+        <button
+          className="wakuwaku"
+          onClick={() => {
+            var rii = document.getElementsByClassName('WCWC')[1];
+            var riiurl = rii.toDataURL('image/jpeg');
+            console.log(riiurl);
+            this.setState({ preview: riiurl });
+          }}>TTTF</button>
         <div className="Dropzone-page">
           {this.state.model ? (
             <MagicDropzone
@@ -169,13 +185,14 @@ export class Tfmd extends React.Component {
               ) : (
                 "Choose or drop a file."
               )}
-              <canvas id="canvas" width="640" height="640" 
-              ref={(canvasB) => (this.canvasB = canvasB)}/>
+              <canvas id="canvas" width="640" height="640"
+                ref={(canvasB) => (this.canvasB = canvasB)} />
             </MagicDropzone>
           ) : (
             <div className="Dropzone">Loading model...</div>
           )}
         </div>
+        <AlwaysOnBottomFooter lr={this.state.lf} children={JSON.stringify(this.state.x1x2y1y2)} />
       </div>
     );
   }

@@ -17,6 +17,7 @@ function windowsOBJ(innerHTML) {
     title: <p className='glowBG'>teststring</p>,
     html: innerHTML,//dataFET,//go edit public/addHTML/swp.html
     showCloseButton: true,
+    footer: "this is a footer",
     didOpen: () => {
       // `MySwal` is a subclass of `Swal` with all the same instance & static methods
       var delayInMilliseconds = 10000; //10 second
@@ -61,6 +62,15 @@ function windowsOBJ(innerHTML) {
 const MySwal = withReactContent(Swal);
 var globHadTrig = false;
 export class UiPhone extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = { //這裡沒必沒必要存在
+      footerObj: "footerObj" ,
+      ttlObj: "ttlObj" ,
+    };
+  }
+
   componentDidMount() {
     //console.log("AppMain.componentDidMount");
     var mainuiwindows = document.getElementsByClassName("Sw222")[0]; //you can only have one of this!!!
@@ -93,7 +103,7 @@ export class UiPhone extends React.Component {
                     //} else if (result.isDenied) {
                     //  Swal.fire('Changes are not saved', '', 'info')
                     //} else {
-                      document.getElementById("root").style.overflow = "scroll";
+                    document.getElementById("root").style.overflow = "scroll";
                     //}
                   });
                 }

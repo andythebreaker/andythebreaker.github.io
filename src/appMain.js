@@ -1,11 +1,11 @@
 import React/*, { Component, useState }*/ from "react";
 import AppSubMain from './AppSubMain';
-import { Tfmd } from "./Tfmd.js";
 import { BackToTop } from "./component/backtotop.jsx"
 import "./css/backtotop.css";
 import Webcam from "react-webcam";
 import "./css/appMain.css"
 import "./css/webcam.css"
+import { Tfmd } from "./Tfmd.js";
 
 /*const videoConstraints = {
   width: 1280,
@@ -69,8 +69,8 @@ export function AppMain(props) {
         </div>
       ))}
     </>
-    <Tfmd ftmdg="ncb" />
-    <Tfmd ftmdg="wcb" />
+    <Tfmd ftmdg="ncb" lf="0vw"/>
+    <Tfmd ftmdg="wcb" lf="50vw"/>
     <BackToTop ocf={() => { console.log("pink button") }} />
   </div>);
   //}
