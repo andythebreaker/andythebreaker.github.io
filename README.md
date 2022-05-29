@@ -1,5 +1,6 @@
 [![pages-build-deployment](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/pages/pages-build-deployment)
 [![CodeQL](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/codeql-analysis.yml)
+[![Build and Deploy](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/main.yml)
 
 這是從JADE轉過來的，看branch=>master
 
