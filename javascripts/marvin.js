@@ -52,8 +52,22 @@ var cvstart0 = () => {
         window.setTimeout(cvstart0, 100); /* this checks the flag every 100 milliseconds*/
       } else {
         /* do something*/
-        exampleFilters(() => { exampleAutoCrop(() => { clickDetectCorners() }) });
-        ;
+        console.log("[Automatic Progress Indicator Scale]🛬exampleFilters");
+        exampleFilters(() => {
+          console.log("[Automatic Progress Indicator Scale]🛬exampleAutoCrop");
+          exampleAutoCrop(() => {
+            console.log("[Automatic Progress Indicator Scale]🛬clickDetectCorners");
+            clickDetectCorners(() => {
+              /*console.log("[Automatic Progress Indicator Scale]🛬TARGimgPerspectiveTransformation");
+              TARGimgPerspectiveTransformation(() => {
+                console.log("[Automatic Progress Indicator Scale]🛬RCWCB");
+                RCWCB()
+              })*/
+              //「這裡no call back」
+              //會接到public/javascripts/index.js的document.getElementById("trig_corner_finish").addEventListener("click", function () {
+            })
+          })
+        });
       }
     }
     c000img.src = img_rs;
@@ -182,7 +196,7 @@ function clickExampleFiltersReset() {
 var exampleFeaturesCornersMap;
 var exampleFeaturesCropRect;
 
-function clickDetectCorners() {
+function clickDetectCorners(/*CB=()=>{console.log("CB is NULL")}「這裡no call back」*/) {
   var zzz = document.getElementById("canvasAutoCrop");
   var dupNode = zzz.cloneNode(true);
   dupNode.id = "imgPerspectiveTransformation";
