@@ -97,14 +97,14 @@
     border-top-color: currentColor;
 }
 
-.glow {
+.glowBG {
     color: #000000;
-    -webkit-animation: glow 1s ease-in-out infinite alternate;
-    -moz-animation: glow 1s ease-in-out infinite alternate;
-    animation: glow 1s ease-in-out infinite alternate;
+    -webkit-animation: glowBG 1s ease-in-out infinite alternate;
+    -moz-animation: glowBG 1s ease-in-out infinite alternate;
+    animation: glowBG 1s ease-in-out infinite alternate;
 }
 
-@keyframes glow {
+@keyframes glowBG {
     from {
         text-shadow: 0 0 1em #ffffff, 0 0 1em #ffffff, 0 0 1em #ffffff, 0 0 1em #ffffff;
     }

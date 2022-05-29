@@ -45,6 +45,7 @@
 ## F/N
 
 - 應該是ssl的問題
+- https or localhost!
 
 ~~### solved~~
 
