@@ -195,12 +195,16 @@ var trig_corner_finish = (CB = () => { console.log("CB = NULL") }) => {
 }
 
 document.getElementById("trig_corner_finish").addEventListener("click", function () {
+    //注意:這裡有流程串聯~!!!!
     console.log("[Automatic Progress Indicator Scale]🛬trig_corner_finish");
     trig_corner_finish(() => {
         console.log("[Automatic Progress Indicator Scale]🛬TARGimgPerspectiveTransformation");
         TARGimgPerspectiveTransformation(() => {
             console.log("[Automatic Progress Indicator Scale]🛬RCWCB");
-            RCWCB()
+            RCWCB(() => {
+                console.log("[Automatic Progress Indicator Scale]🛬wakuwaku");
+                $('.wakuwaku').each((i, obj) => { obj.click() });
+            })
         })
     })
 });
