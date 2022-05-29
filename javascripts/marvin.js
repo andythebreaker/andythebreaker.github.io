@@ -21,39 +21,39 @@ var cvstart0 = () => {
   getMeta(img_rs, (w, h) => {
     console.log("w=" + w + " h=" + h);
     var c000img = document.createElement("img");
-    c000img.style.width=w+'px';c000img.style.height=h+'px';
+    c000img.style.width = w + 'px'; c000img.style.height = h + 'px';
     c000img.onload = function (c000event) {
       // Actual resizing
-      
+
       var c000 = document.createElement("canvas");
-      c000.id="CR000"+ randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
-      c000.style.width=w+'px';c000.style.height=h+'px';
-      c000.width=w;c000.height=h;
+      c000.id = "CR000" + randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ');
+      c000.style.width = w + 'px'; c000.style.height = h + 'px';
+      c000.width = w; c000.height = h;
 
       var c000ctx = c000.getContext('2d');
       c000ctx.drawImage(c000img, 0, 0, w, h, 0, 0, w, h);
 
-      var CR000=cv.imread(c000);
-var c000dst = new cv.Mat();
-cv.resize(CR000, c000dst, { width: 1000, height: 570 });
-var tmp_canv = document.createElement('canvas');
-    var tmpid = "tm" + randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
-    tmp_canv.id = tmpid;
-    tmp_canv.width = 1000;
-    tmp_canv.classList.add("tm555");
-    tmp_canv.height = 570;
-    document.body.appendChild(tmp_canv);
-    cv.imshow(tmpid, c000dst);
+      var CR000 = cv.imread(c000);
+      var c000dst = new cv.Mat();
+      cv.resize(CR000, c000dst, { width: 1000, height: 570 });
+      var tmp_canv = document.createElement('canvas');
+      var tmpid = "tm" + randomString(32, '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ')
+      tmp_canv.id = tmpid;
+      tmp_canv.width = 1000;
+      tmp_canv.classList.add("tm555");
+      tmp_canv.height = 570;
+      document.body.appendChild(tmp_canv);
+      cv.imshow(tmpid, c000dst);
 
       var c000dataurl = tmp_canv.toDataURL('image/jpeg');
       images_tp1_jpg = c000dataurl;
-      getMeta(c000dataurl, (w2, h2) => {console.log("w2=" + w2 + " h2=" + h2);});
+      getMeta(c000dataurl, (w2, h2) => { console.log("w2=" + w2 + " h2=" + h2); });
       if (typeof MarvinImage === 'undefined') {//https://stackoverflow.com/questions/5113374/javascript-check-if-variable-exists-is-defined-initialized
         window.setTimeout(cvstart0, 100); /* this checks the flag every 100 milliseconds*/
       } else {
         /* do something*/
-        exampleFilters();
-        exampleAutoCrop();
+        exampleFilters(() => { exampleAutoCrop(() => { clickDetectCorners() }) });
+        ;
       }
     }
     c000img.src = img_rs;
@@ -79,18 +79,26 @@ function example1() {
   });
 }
 
-function exampleFilters() {
+function exampleFilters(CB20220529) {
   imageExampleFilters = new MarvinImage();
   imageExampleFilters.load(images_tp1_jpg, function () {
     imageExampleFilters.draw(document.getElementById("canvasExampleFilters"));
-    imageExampleFiltersOut = new MarvinImage(imageExampleFilters.getWidth(), imageExampleFilters.getHeight())
+    imageExampleFiltersOut = new MarvinImage(imageExampleFilters.getWidth(), imageExampleFilters.getHeight());
+    /*===============================
+    callback added
+    ===============================*/
+    CB20220529();
   });
 }
 
-function exampleAutoCrop() {
+function exampleAutoCrop(CB20220529) {
   imageAutoCrop = new MarvinImage();
   imageAutoCrop.load(images_tp1_jpg, function () {
     imageAutoCrop.draw(document.getElementById("canvasAutoCrop"));
+    /*===============================
+    callback added
+    ===============================*/
+    CB20220529();
   });
 }
 
