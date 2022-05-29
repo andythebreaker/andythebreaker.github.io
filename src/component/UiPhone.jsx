@@ -101,6 +101,12 @@ export class UiPhone extends React.Component {
                   <div class="vizor" ></div>
                 <button id="not_react_comp_time_swipe_init" style="display:none;" onclick="swipeadd()"></button>
                 <div class="fpu"></div>
+                <button class="ui primary button">
+  Save
+</button>
+<button class="ui button">
+  Discard
+</button>
                 </div>
                 `,
               showCloseButton: true,
