@@ -38,6 +38,10 @@
 - port
 > use `./killport.sh`
 
+- request-a-page-build
+> [request-a-page-build api](https://developer.github.com/v3/repos/pages/#request-a-page-build)
+`gh api --method POST -H "Accept: application/vnd.github.v3+json" /repos/andythebreaker/andythebreaker.github.io/pages/builds`
+
 ## F/N
 
 - 應該是ssl的問題
