@@ -2,9 +2,9 @@
 [![CodeQL](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/codeql-analysis.yml)
 [![Build and Deploy](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/main.yml/badge.svg)](https://github.com/andythebreaker/andythebreaker.github.io/actions/workflows/main.yml)
 
-這是從JADE轉過來的，看branch=>master
+# start info.
 
-# windows
+## windows
 
 |ver|node|
 |--|--|
@@ -16,7 +16,7 @@
 
 `npm start`
 
-# linux
+## linux
 
 |ver|node|
 |--|--|
@@ -27,3 +27,19 @@
 `npm install` : ok
 
 `npm start` : ok
+
+
+# Q/A
+
+## B/N
+
+### solved
+
+- port
+> use `./killport.sh`
+
+## F/N
+
+### solved
+
+[chrome-navigator-mediadevices-getusermedia-is-not-a-function](https://stackoverflow.com/questions/37315361/chrome-navigator-mediadevices-getusermedia-is-not-a-function)
