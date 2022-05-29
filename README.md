@@ -40,6 +40,8 @@
 
 ## F/N
 
-### solved
+- 應該是ssl的問題
 
-[chrome-navigator-mediadevices-getusermedia-is-not-a-function](https://stackoverflow.com/questions/37315361/chrome-navigator-mediadevices-getusermedia-is-not-a-function)
+~~### solved~~
+
+~~[chrome-navigator-mediadevices-getusermedia-is-not-a-function](https://stackoverflow.com/questions/37315361/chrome-navigator-mediadevices-getusermedia-is-not-a-function)~~
