@@ -38,7 +38,7 @@ export function AppMain(props) {
         <div key={key}>
           {device.label || `Device ${key + 1}`}
           <Webcam
-          className="webcamcss webcamMain"
+            className="webcamcss webcamMain"
             audio={false}
             videoConstraints={{ deviceId: device.deviceId }}
             screenshotFormat="image/jpeg"
@@ -46,6 +46,7 @@ export function AppMain(props) {
           >
             {({ getScreenshot }) => (
               <button
+                className="getScreenshotBtonMainTrig01"
                 onClick={() => {
                   const imageSrc = getScreenshot();
                   //console.log(imageSrc);
@@ -70,7 +71,7 @@ export function AppMain(props) {
     </>
     <Tfmd ftmdg="ncb" />
     <Tfmd ftmdg="wcb" />
-    <BackToTop ocf={()=>{console.log("pink button")}}/>
+    <BackToTop ocf={() => { console.log("pink button") }} />
   </div>);
   //}
 }

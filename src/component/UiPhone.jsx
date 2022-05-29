@@ -47,6 +47,7 @@ export class UiPhone extends React.Component {
                         //your code to be executed after 10 second
                         if (document.getElementsByClassName('back-to-top').length === 0) {
                           back_to_top();
+                        console.log("back_to_top...wait...");
                         }
                         else {
                           //var flowbubble=document.createElement('div');
@@ -61,8 +62,12 @@ export class UiPhone extends React.Component {
                           fpu[0].innerHTML = mainFPU.outerHTML;
                           fpu[0].getElementsByTagName('button')[0].addEventListener('click', () => {
                             mainFPU.click();
-                            //TODO這裡感覺也不用切換了
+                            /*TODO這裡感覺也不用切換了
+                            反正我都吃最下方的dom
+                            dom順序下優先
+                            */
                           });
+                          console.log("back_to_top...end!!!");
                         }
                       }, delayInMilliseconds);
                     }
