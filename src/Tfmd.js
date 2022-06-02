@@ -173,7 +173,7 @@ export class Tfmd extends React.Component {
         ctx.fillText(klass + ":" + score, x1, y1);
 
       }
-      toast(JSON.stringify(this_state_x1x2y1y2), "", "info");
+      toast(this.props.ftmdg + JSON.stringify(this_state_x1x2y1y2));
     });
   };
 
