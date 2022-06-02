@@ -1,6 +1,7 @@
 //copy form src/component/backtotop.jsx
 import React, { PureComponent } from "react";
 import styled from "styled-components";
+import Speech from 'react-speech';
 /*https://www.npmjs.com/package/react-back-to-top-button*/
 const Button = styled.button({
   fontSize: "5px",
@@ -27,7 +28,7 @@ export class AlwaysOnBottomFooter extends PureComponent {
     super(props);
     this.state = {
       onclickFucn: props.ocf,
-        }
+    }
   }
 
   state = {
@@ -35,14 +36,14 @@ export class AlwaysOnBottomFooter extends PureComponent {
   };
 
   render() {
-    return (
+    return (<div>
       <Button
         className="back-to-top2"
         onClick={this.state.onclickFucn}
         style={this.props.style}
       >
         {this.props.children || "MDinfo"}
-      </Button>
+      </Button><Speech text="beep" voice="Google UK English Female"/></div>
     );
   }
 }

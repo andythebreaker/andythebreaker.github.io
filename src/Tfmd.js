@@ -5,7 +5,6 @@ import MagicDropzone from "react-magic-dropzone";
 import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
 import "./styles.css";
 const tf = require('@tensorflow/tfjs');
-
 const weights = '/web_model/model.json';
 
 const names = ["Black",
@@ -42,11 +41,13 @@ export class Tfmd extends React.Component {
   }
 
   onDrop = (accepted, rejected, links) => {
+    document.getElementsByClassName('rs-play')[0].click()
     console.log(accepted, links);
     this.setState({ preview: accepted[0].preview || links[0] });
   };
 
   cropToCanvas = (image, canvas, ctx) => {
+    document.getElementsByClassName('rs-play')[0].click()
     const naturalWidth = image.naturalWidth;
     const naturalHeight = image.naturalHeight;
 
@@ -74,6 +75,7 @@ export class Tfmd extends React.Component {
   };
 
   onImageChange = e => {
+    document.getElementsByClassName('rs-play')[0].click()
     var c = null;
     var ctx = null;
     //if (ci(e.target.tagName).equals('IMG')) {
@@ -92,6 +94,7 @@ export class Tfmd extends React.Component {
         .div(255.0).expandDims(0);
     });
     this.state.model.executeAsync(input).then(res => {
+      document.getElementsByClassName('rs-play')[0].click()
       // Font options.
       const font = "16px sans-serif";
       ctx.font = font;
@@ -107,6 +110,7 @@ export class Tfmd extends React.Component {
 
       var i;
       for (i = 0; i < valid_detections_data; ++i) {
+        document.getElementsByClassName('rs-play')[0].click()
         let [x1, y1, x2, y2] = boxes_data.slice(i * 4, (i + 1) * 4);
         var tmpxxyy1122 = { org: { x1: x1, x2: x2, y1: y1, y2: y2, }, mut: {}, klass: "n/a", score: "n/a" }
         x1 *= c.width;
@@ -141,6 +145,7 @@ export class Tfmd extends React.Component {
         });
       }
       for (i = 0; i < valid_detections_data; ++i) {
+        document.getElementsByClassName('rs-play')[0].click()
         let [x1, y1, ,] = boxes_data.slice(i * 4, (i + 1) * 4);
         x1 *= c.width;
         y1 *= c.height;
