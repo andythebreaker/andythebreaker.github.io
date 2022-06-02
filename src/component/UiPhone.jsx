@@ -104,6 +104,7 @@ export class UiPhone extends React.Component {
                     //  Swal.fire('Changes are not saved', '', 'info')
                     //} else {
                     document.getElementById("root").style.overflow = "scroll";
+                    Swal.fire('swal is closed', '', 'info')
                     //}
                   });
                 }
