@@ -31,7 +31,15 @@ var cvstart0 = () => {
       c000.width = w; c000.height = h;
 
       var c000ctx = c000.getContext('2d');
-      c000ctx.drawImage(c000img, 0, 0, w, h, 0, 0, w, h);
+      //c000ctx.drawImage(c000img, 0, 0, w, h, 0, 0, w, h);
+      var xt = w / 2;
+      var yt = h / 2;
+      var TO_RADIANS = Math.PI/180;
+      context.translate(xt, yt);
+context.rotate(-90*TO_RADIANS);
+context.drawImage(c000img, -w / 2, -h / 2, w, h);
+context.rotate(90*TO_RADIANS);
+context.translate(-xt, -yt);
 
       var CR000 = cv.imread(c000);
       var c000dst = new cv.Mat();
