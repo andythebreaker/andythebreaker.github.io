@@ -7,6 +7,14 @@ import "./styles.css";
 const tf = require('@tensorflow/tfjs');
 const weights = '/web_model/model.json';
 
+function downloadasimage(canvasdom) {
+  var c = canvasdom;
+  var link = document.getElementById('cropImageLink');
+  link.setAttribute('download', 'MintyPaper.png');
+  link.setAttribute('href', c.toDataURL("image/png").replace("image/png", "image/octet-stream"));
+  link.click();
+}
+
 const names = ["Black",
   "Brown",
   "Red",
@@ -157,6 +165,7 @@ export class Tfmd extends React.Component {
         ctx.fillText(klass + ":" + score, x1, y1);
 
       }
+      downloadasimage(c);
     });
   };
 
