@@ -37,7 +37,7 @@ export class AlwaysOnBottomFooter extends PureComponent {
   render() {
     return (
       <Button
-        className="back-to-top"
+        className="back-to-top2"
         onClick={this.state.onclickFucn}
         style={this.props.style}
       >
