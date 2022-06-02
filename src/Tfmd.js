@@ -4,14 +4,14 @@ import MagicDropzone from "react-magic-dropzone";
 //import { ci } from 'case-insensitive';
 import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
 import "./styles.css";
-//import Swal from "sweetalert2";
-//import withReactContent from "sweetalert2-react-content";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 const tf = require('@tensorflow/tfjs');
 //var randomstring = require("randomstring");
 
 const weights = '/web_model/model.json';
-/*const MySwal = withReactContent(Swal);
-
+const MySwal = withReactContent(Swal);
+/*
 function downloadasimage(canvasdom) {
   var c = canvasdom;
   var link = document.createElement('a');
@@ -123,6 +123,7 @@ export class Tfmd extends React.Component {
       tf.dispose(res)
 
       var i;
+      var this_state_x1x2y1y2 = [];
       for (i = 0; i < valid_detections_data; ++i) {
         //document.getElementsByClassName('rs-play')[0].click()
         let [x1, y1, x2, y2] = boxes_data.slice(i * 4, (i + 1) * 4);
@@ -131,7 +132,7 @@ export class Tfmd extends React.Component {
         x2 *= c.width;
         y1 *= c.height;
         y2 *= c.height;
-        var tmpxxyy = this.state.x1x2y1y2;
+        var tmpxxyy = this_state_x1x2y1y2//this.state.x1x2y1y2;
         tmpxxyy1122["mut"] = { x1: x1, x2: x2, y1: y1, y2: y2, };
 
         const width = x2 - x1;
@@ -154,9 +155,10 @@ export class Tfmd extends React.Component {
         ctx.fillRect(x1, y1, textWidth + 4, textHeight + 4);
 
         tmpxxyy.push(tmpxxyy1122);
-        this.setState({
+        /*this.setState({
           x1x2y1y2: tmpxxyy,
-        });
+        });*/
+        this_state_x1x2y1y2 = tmpxxyy
       }
       for (i = 0; i < valid_detections_data; ++i) {
         //document.getElementsByClassName('rs-play')[0].click()
@@ -171,6 +173,8 @@ export class Tfmd extends React.Component {
         ctx.fillText(klass + ":" + score, x1, y1);
 
       }
+      MySwal.fire(JSON.stringify(this_state_x1x2y1y2), "", "info")
+
     });
   };
 

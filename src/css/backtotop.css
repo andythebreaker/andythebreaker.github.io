@@ -133,3 +133,23 @@
 	opacity: 1;
 	transition: 0s
 }
+
+.back-to-top:after {
+	content: "";
+	background: #ddb98b;
+	display: block;
+	position: absolute;
+	padding-top: 300%;
+	padding-left: 350%;
+	margin-left: -20px !important;
+	margin-top: -120%;
+	opacity: 0;
+	transition: all 0.8s
+}
+
+.back-to-top:active:after {
+	padding: 0;
+	margin: 0;
+	opacity: 1;
+	transition: 0s
+}
