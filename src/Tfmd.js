@@ -5,6 +5,7 @@ import MagicDropzone from "react-magic-dropzone";
 import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
 import "./styles.css";
 import { ToastContainer, toast } from 'react-toastify';
+//-import { DebugDownload } from './functionalUnit/debugDownload.js'
 import 'react-toastify/dist/ReactToastify.css';
 const tf = require('@tensorflow/tfjs');
 //var randomstring = require("randomstring");
@@ -97,6 +98,17 @@ export class Tfmd extends React.Component {
     c = this.canvasB;//TODO:check this
     ctx = c.getContext("2d");
     this.cropToCanvas(e.target, c, ctx);
+    //function DebugDownload(url) {
+      var a = document.createElement('a');
+      a.href = e.target.src;
+      a.download = "randomstring.png";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      a.remove();
+    //}
+    //DebugDownload(e.target.src);
+
     //} else {
     //  c = document.getElementById("canvas");
     //   ctx = c.getContext("2d");
@@ -184,9 +196,11 @@ export class Tfmd extends React.Component {
         <button
           className="wakuwaku"
           onClick={() => {
-            var rii = document.getElementsByClassName('WCWC')[1];
-            var riiurl = rii.toDataURL('image/jpeg');
-            console.log(riiurl);
+            //var rii = document.getElementsByClassName('WCWC')[1];
+            //var riiurl = rii.toDataURL('image/jpeg');
+            //console.log(riiurl);
+            var rii = document.getElementsByClassName('rtU')[1];
+            var riiurl = rii.innerText;
             this.setState({ preview: riiurl });
           }}>TTTF</button>
         <div className="Dropzone-page">

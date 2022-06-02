@@ -16,6 +16,7 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 //import Paper from "@mui/material/Paper";
 import { MyBtnComp } from "./MyBtn.jsx";
+//-import { DebugDownload } from './../functionalUnit/debugDownload.js'
 //import { ImgStrip } from "./ImageStrip.jsx";
 //import ReactJson from "react-json-view";
 import {
@@ -26,8 +27,10 @@ import { RateNct } from "./RateNct.jsx";
 import HorizontalScroll from "react-horizontal-scrolling";
 import * as tf from '@tensorflow/tfjs'
 import * as sk from 'scikitjs'
-sk.setBackend(tf)
+//var randomstring = require("randomstring");
 var pixels = require("image-pixels");
+
+sk.setBackend(tf)
 
 export class Welcome extends React.Component {
   constructor(props) {
@@ -125,7 +128,6 @@ export class Welcome extends React.Component {
   }
 
   onchangeURL(aaa) {
-    //console.log(aaa.target);
     var tmp_stat = this.state.canvasA;
     tmp_stat["canvasURL"] = aaa.value;
     this.setState({
@@ -134,6 +136,18 @@ export class Welcome extends React.Component {
   }
 
   onchangeRefresh(et) {
+    console.log("➰➰➰");
+    /*function DebugDownload(url) {
+      console.log("debug"+url)
+      var a = document.createElement('a');
+      a.href = url;
+      a.download = randomstring.generate() + ".png";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      a.remove();
+    }
+    DebugDownload(et.parentNode.parentNode.getElementsByClassName("rtU")[0].innerText);*/
     var tmp_stat = this.state.canvasA;
     tmp_stat["canvasWidth"] =
       et.parentNode.parentNode.getElementsByClassName("rtW")[0].innerText;
@@ -224,7 +238,7 @@ export class Welcome extends React.Component {
         width: this.state.canvasA.pixW,
         height: !(i + 1 < 10)
           ? this.state.canvasA.pixH -
-            i * Math.round(this.state.canvasA.pixH / 10)
+          i * Math.round(this.state.canvasA.pixH / 10)
           : Math.round(this.state.canvasA.pixH / 10),
       };
       console.log(clipConf);
@@ -282,7 +296,7 @@ export class Welcome extends React.Component {
         y: this.state.canvasA.pixH * (4.0 / 10.0),
         width: !(i + 1 < 45)
           ? this.state.canvasA.pixW -
-            i * Math.round(this.state.canvasA.pixW / 45)
+          i * Math.round(this.state.canvasA.pixW / 45)
           : Math.round(this.state.canvasA.pixW / 45),
         height: this.state.canvasA.pixH * (2.0 / 10.0),
       };
