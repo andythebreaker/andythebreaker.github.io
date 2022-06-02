@@ -4,13 +4,13 @@ import MagicDropzone from "react-magic-dropzone";
 //import { ci } from 'case-insensitive';
 import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
 import "./styles.css";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const tf = require('@tensorflow/tfjs');
 //var randomstring = require("randomstring");
 
 const weights = '/web_model/model.json';
-const MySwal = withReactContent(Swal);
+//const MySwal = withReactContent(Swal);
 /*
 function downloadasimage(canvasdom) {
   var c = canvasdom;
@@ -173,8 +173,7 @@ export class Tfmd extends React.Component {
         ctx.fillText(klass + ":" + score, x1, y1);
 
       }
-      MySwal.fire(JSON.stringify(this_state_x1x2y1y2), "", "info")
-
+      toast(JSON.stringify(this_state_x1x2y1y2), "", "info");
     });
   };
 
@@ -216,6 +215,7 @@ export class Tfmd extends React.Component {
           )}
         </div>
         <AlwaysOnBottomFooter lr={this.state.lf} children={JSON.stringify(this.state.x1x2y1y2)} />
+        <ToastContainer />
       </div>
     );
   }
