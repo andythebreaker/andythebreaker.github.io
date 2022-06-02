@@ -4,13 +4,13 @@ import MagicDropzone from "react-magic-dropzone";
 //import { ci } from 'case-insensitive';
 import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
 import "./styles.css";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
+//import Swal from "sweetalert2";
+//import withReactContent from "sweetalert2-react-content";
 const tf = require('@tensorflow/tfjs');
-var randomstring = require("randomstring");
+//var randomstring = require("randomstring");
 
 const weights = '/web_model/model.json';
-const MySwal = withReactContent(Swal);
+/*const MySwal = withReactContent(Swal);
 
 function downloadasimage(canvasdom) {
   var c = canvasdom;
@@ -18,7 +18,7 @@ function downloadasimage(canvasdom) {
   link.setAttribute('download', randomstring.generate()+'.png');
   link.setAttribute('href', c.toDataURL("image/png").replace("image/png", "image/octet-stream"));
   link.click();
-}
+}*/
 
 const names = ["Black",
   "Brown",
@@ -88,6 +88,7 @@ export class Tfmd extends React.Component {
   };
 
   onImageChange = e => {
+    console.log("[Automatic Progress Indicator Scale]🛬md");
     //document.getElementsByClassName('rs-play')[0].click()
     var c = null;
     var ctx = null;
@@ -170,8 +171,6 @@ export class Tfmd extends React.Component {
         ctx.fillText(klass + ":" + score, x1, y1);
 
       }
-      downloadasimage(c);
-      MySwal.fire('dwed', '', 'info');
     });
   };
 
