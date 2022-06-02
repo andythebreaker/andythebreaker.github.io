@@ -43,7 +43,7 @@ export class AlwaysOnBottomFooter extends PureComponent {
         style={this.props.style}
       >
         {this.props.children || "MDinfo"}
-      </Button><Speech text="beep" voice="Google UK English Female"/></div>
+      </Button><Speech text={this.props.children} voice="Google UK English Female" /></div>
     );
   }
 }

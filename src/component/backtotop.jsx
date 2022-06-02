@@ -40,7 +40,7 @@ export class BackToTop extends PureComponent {
         onClick={this.state.onclickFucn}
         style={this.props.style}
       >
-        {this.props.children || "切換鏡頭"}
+        {this.props.children || "speak"}
       </Button>
     );
   }

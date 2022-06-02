@@ -69,9 +69,15 @@ export function AppMain(props) {
         </div>
       ))}
     </>
-    <Tfmd ftmdg="ncb" lf="0vw"/>
-    <Tfmd ftmdg="wcb" lf="50vw"/>
-    <BackToTop ocf={() => { console.log("pink button") }} />
+    <Tfmd ftmdg="ncb" lf="0vw" />
+    <Tfmd ftmdg="wcb" lf="50vw" />
+    <BackToTop ocf={() => {
+      var rsplay = document.getElementsByClassName('rs-play');
+      for (let indexres = 0; indexres < rsplay.length; indexres++) {
+        const elementres = rsplay[indexres];
+        elementres.click();
+      }
+    }} />
   </div>);
   //}
 }
