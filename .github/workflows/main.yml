@@ -10,7 +10,7 @@ permissions:
   contents: write
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-20.04.4
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
@@ -24,7 +24,7 @@ jobs:
         run: |
           node --version
           npm --version
-          npm install
+          yarn install
           npm run-script build
           
       - name: Deploy 🚀
