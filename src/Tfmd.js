@@ -186,7 +186,9 @@ export class Tfmd extends React.Component {
 
       }
       toast(this.props.ftmdg + JSON.stringify(this_state_x1x2y1y2));
+
       //TODO:把這個download下來
+
 function download(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
