@@ -185,7 +185,7 @@ o888o                                                           .o. 88P         
         //}
         imagetmpca.src = c.toDataURL("image/png");
         tmpcactx.drawImage(imagetmpca, x1, y1, width, height, 0, 0, width, height);
-        document.getElementsByClassName('rtU')[14 + i].innerText = tmpcactx.toDataURL();
+        document.getElementsByClassName('rtU')[14 + i].innerText = tmpca.toDataURL();
         document.getElementsByClassName('rtW')[14 + i].innerText = width;
         document.getElementsByClassName('rtH')[14 + i].innerText = height;
         document.getElementsByClassName('reactTransRefresh')[14 + i].click();
