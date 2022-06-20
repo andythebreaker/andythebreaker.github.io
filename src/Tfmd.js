@@ -212,8 +212,14 @@ export class Tfmd extends React.Component {
       }
 
       download('Rainbow_Toast_Debugging_' + String(makeid(7)), String(this.props.ftmdg + JSON.stringify(this_state_x1x2y1y2)));
-      //TODO:手動驗證是否正確(框出需求)
-
+      //手動驗證是否正確(框出需求)
+/*    .___                  .__                    .___                                                  
+  __| _/______  _  ______ |  |   _________     __| _/   ____ _____    ____ _____ ___  _______    ______
+ / __ |/  _ \ \/ \/ /    \|  |  /  _ \__  \   / __ |  _/ ___\\__  \  /    \\__  \\  \/ /\__  \  /  ___/
+/ /_/ (  <_> )     /   |  \  |_(  <_> ) __ \_/ /_/ |  \  \___ / __ \|   |  \/ __ \\   /  / __ \_\___ \ 
+\____ |\____/ \/\_/|___|  /____/\____(____  /\____ |   \___  >____  /___|  (____  /\_/  (____  /____  >
+     \/                 \/                \/      \/       \/     \/     \/     \/           \/     \/ 
+     */
       var b = document.createElement('a');
       b.href = c.toDataURL("image/png");
       b.download = "mid_rec_" + String(makeid(7)) + ".png";
