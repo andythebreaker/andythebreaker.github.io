@@ -34,7 +34,6 @@
     "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.1.0",
-    "react-horizontal-scrolling": "^0.1.8",
     "react-jimp": "^1.1.7",
     "react-json-view": "^1.21.3",
     "react-magic-dropzone": "^1.0.1",
