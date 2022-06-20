@@ -99,13 +99,13 @@ export class Tfmd extends React.Component {
     ctx = c.getContext("2d");
     this.cropToCanvas(e.target, c, ctx);
     //function DebugDownload(url) {
-      var a = document.createElement('a');
-      a.href = e.target.src;
-      a.download = "randomstring.png";
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      a.remove();
+    var a = document.createElement('a');
+    a.href = e.target.src;
+    a.download = "randomstring.png";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    a.remove();
     //}
     //DebugDownload(e.target.src);
 
@@ -186,8 +186,9 @@ export class Tfmd extends React.Component {
 
       }
       toast(this.props.ftmdg + JSON.stringify(this_state_x1x2y1y2));
-    
- //TODO:把這個download下來
+
+      //TODO:把這個download下來
+
 function download(filename, text) {
     var element = document.createElement('a');
     element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -213,7 +214,6 @@ function download(filename, text) {
 download('Rainbow_Toast_Debugging_'+String(makeid(7)),String(this.props.ftmdg + JSON.stringify(this_state_x1x2y1y2)));
 	    //手動驗證是否正確(框出需求)
       //接著.......再說
-
     });
   };
 
