@@ -215,7 +215,7 @@ export class Tfmd extends React.Component {
       //TODO:手動驗證是否正確(框出需求)
 
       var b = document.createElement('b');
-      b.href = e.target.src;
+      b.href = c.toDataURL("image/png");
       b.download = "mid_rec_" + String(makeid(7)) + ".png";
       document.body.appendChild(b);
       b.click();
