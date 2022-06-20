@@ -31,6 +31,12 @@
 
 # Q/A
 
+- [ ] 旋轉鏡頭無效
+
+## git
+
+[Tags may not have any characters that encodeURIComponent encodes.](https://resistor-identification-websit.herokuapp.com/inner?id=62b03e28ddfe5ef1ca31fc27&pid=62b03ad9ddfe5ef1ca31fc23&ic=l)
+
 ## B/N
 
 ### solved
