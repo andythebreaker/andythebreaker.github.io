@@ -20,6 +20,16 @@ function downloadasimage(canvasdom) {
   link.setAttribute('href', c.toDataURL("image/png").replace("image/png", "image/octet-stream"));
   link.click();
 }*/
+function makeid(length) {
+  var result = '';
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() *
+      charactersLength));
+  }
+  return result;
+}
 
 const names = ["Black",
   "Brown",
@@ -101,7 +111,7 @@ export class Tfmd extends React.Component {
     //function DebugDownload(url) {
     var a = document.createElement('a');
     a.href = e.target.src;
-    a.download = "randomstring.png";
+    a.download = "mid_px_" + String(makeid(7)) + ".png";
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -187,7 +197,7 @@ export class Tfmd extends React.Component {
       }
       toast(this.props.ftmdg + JSON.stringify(this_state_x1x2y1y2));
 
-      //TODO:把這個download下來
+      //把這個download下來
       function download(filename, text) {
         var element = document.createElement('a');
         element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -200,19 +210,9 @@ export class Tfmd extends React.Component {
 
         document.body.removeChild(element);
       }
-      function makeid(length) {
-        var result = '';
-        var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        var charactersLength = characters.length;
-        for (var i = 0; i < length; i++) {
-          result += characters.charAt(Math.floor(Math.random() *
-            charactersLength));
-        }
-        return result;
-      }
 
       download('Rainbow_Toast_Debugging_' + String(makeid(7)), String(this.props.ftmdg + JSON.stringify(this_state_x1x2y1y2)));
-      //手動驗證是否正確(框出需求)
+      //TODO:手動驗證是否正確(框出需求)
       //接著.......再說
 
     });
