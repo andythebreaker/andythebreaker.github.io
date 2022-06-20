@@ -30,6 +30,27 @@ import * as sk from 'scikitjs'
 //var randomstring = require("randomstring");
 var pixels = require("image-pixels");
 
+/*                                     .o8                                                .             o8o                         
+                                    "888                                              .o8             `"'                         
+oooo d8b  .oooo.   ooo. .oo.    .oooo888   .ooooo.  ooo. .oo.  .oo.         .oooo.o .o888oo oooo d8b oooo  ooo. .oo.    .oooooooo 
+`888""8P `P  )88b  `888P"Y88b  d88' `888  d88' `88b `888P"Y88bP"Y88b       d88(  "8   888   `888""8P `888  `888P"Y88b  888' `88b  
+ 888      .oP"888   888   888  888   888  888   888  888   888   888       `"Y88b.    888    888      888   888   888  888   888  
+ 888     d8(  888   888   888  888   888  888   888  888   888   888       o.  )88b   888 .  888      888   888   888  `88bod8P'  
+d888b    `Y888""8o o888o o888o `Y8bod88P" `Y8bod8P' o888o o888o o888o      8""888P'   "888" d888b    o888o o888o o888o `8oooooo.  
+                                                                                                                       d"     YD  
+                                                                                                                       "Y88888P'  
+                                                                                                                                  */
+function makeid(length) {
+  var result = '';
+  var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() *
+      charactersLength));
+  }
+  return result;
+}
+
 sk.setBackend(tf)
 
 export class Welcome extends React.Component {
@@ -359,6 +380,23 @@ export class Welcome extends React.Component {
                 width={this.state.canvasA.canvasWidth}
                 height={this.state.canvasA.canvasHeight}
               />
+              <button className="downloadTcanvas" onClick={(e) => {
+                /*    .___                  .__                    .___                                                  
+  __| _/______  _  ______ |  |   _________     __| _/   ____ _____    ____ _____ ___  _______    ______
+ / __ |/  _ \ \/ \/ /    \|  |  /  _ \__  \   / __ |  _/ ___\\__  \  /    \\__  \\  \/ /\__  \  /  ___/
+/ /_/ (  <_> )     /   |  \  |_(  <_> ) __ \_/ /_/ |  \  \___ / __ \|   |  \/ __ \\   /  / __ \_\___ \ 
+\____ |\____/ \/\_/|___|  /____/\____(____  /\____ |   \___  >____  /___|  (____  /\_/  (____  /____  >
+     \/                 \/                \/      \/       \/     \/     \/     \/           \/     \/ 
+     */
+                //console.log(e.target)
+                var downloadcanvasTMP = document.createElement('a');
+                downloadcanvasTMP.href = this.canvasA.toDataURL("image/png");
+                downloadcanvasTMP.download = " downloadcanvasT_" + String(makeid(7)) + ".png";
+                document.body.appendChild(downloadcanvasTMP);
+                downloadcanvasTMP.click();
+                document.body.removeChild(downloadcanvasTMP);
+                downloadcanvasTMP.remove();
+              }}></button>
             </td>
             <td>
               <RateNct nctNrt={this.state.canvasA.nClustersT} cpc={this} />

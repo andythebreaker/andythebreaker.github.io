@@ -165,6 +165,32 @@ export class Tfmd extends React.Component {
         tmpxxyy1122["klass"] = klass;
         tmpxxyy1122["score"] = score;
 
+        /**                        .o8       oooo   o8o                 88     o8o                                                              o8o                 .                 88                                o8o                          .oooooo.                                         o8o          
+                       "888       `888   `"'                .8'     `"'                                                              `"'               .o8                .8'                                `"'                         d8P'  `Y8b                                        `"'          
+oo.ooooo.  oooo  oooo   888oooo.   888  oooo   .ooooo.     .8'     oooo  .oooo.   oooo    ooo  .oooo.    .oooo.o  .ooooo.  oooo d8b oooo  oo.ooooo.  .o888oo  .oooo.o    .8'  oooo d8b  .ooooo.   .oooooooo oooo   .ooooo.  ooo. .oo.   888          oooo d8b  .ooooo.  oo.ooooo.         oooo  .oooo.o 
+ 888' `88b `888  `888   d88' `88b  888  `888  d88' `"Y8   .8'      `888 `P  )88b   `88.  .8'  `P  )88b  d88(  "8 d88' `"Y8 `888""8P `888   888' `88b   888   d88(  "8   .8'   `888""8P d88' `88b 888' `88b  `888  d88' `88b `888P"Y88b  888          `888""8P d88' `88b  888' `88b        `888 d88(  "8 
+ 888   888  888   888   888   888  888   888  888        .8'        888  .oP"888    `88..8'    .oP"888  `"Y88b.  888        888      888   888   888   888   `"Y88b.   .8'     888     888ooo888 888   888   888  888   888  888   888  888           888     888   888  888   888         888 `"Y88b.  
+ 888   888  888   888   888   888  888   888  888   .o8 .8'         888 d8(  888     `888'    d8(  888  o.  )88b 888   .o8  888      888   888   888   888 . o.  )88b .8'      888     888    .o `88bod8P'   888  888   888  888   888  `88b    ooo   888     888   888  888   888 .o.     888 o.  )88b 
+ 888bod8P'  `V88V"V8P'  `Y8bod8P' o888o o888o `Y8bod8P' 88          888 `Y888""8o     `8'     `Y888""8o 8""888P' `Y8bod8P' d888b    o888o  888bod8P'   "888" 8""888P' 88      d888b    `Y8bod8P' `8oooooo.  o888o `Y8bod8P' o888o o888o  `Y8bood8P'  d888b    `Y8bod8P'  888bod8P' Y8P     888 8""888P' 
+ 888                                                                888                                                                    888                                                   d"     YD                                                               888               888          
+o888o                                                           .o. 88P                                                                   o888o                                                  "Y88888P'                                                              o888o          .o. 88P          
+                                                                `Y888P                                                                                                                                                                                                                 `Y888P            */
+        var tmpca = document.createElement("canvas");
+        var tmpcactx = tmpca.getContext('2d');
+        tmpca.width = width;
+        tmpca.height = height;
+        var imagetmpca = new Image();
+
+        //imagetmpca.onload = function(){
+        //}
+        imagetmpca.src = c.toDataURL("image/png");
+        tmpcactx.drawImage(imagetmpca, x1, y1, width, height, 0, 0, width, height);
+        document.getElementsByClassName('rtU')[14 + i].innerText = tmpcactx.toDataURL();
+        document.getElementsByClassName('rtW')[14 + i].innerText = width;
+        document.getElementsByClassName('rtH')[14 + i].innerText = height;
+        document.getElementsByClassName('reactTransRefresh')[14 + i].click();
+        tmpca.remove();
+
         // Draw the bounding box.
         ctx.strokeStyle = "#00FFFF";
         ctx.lineWidth = 4;
@@ -213,13 +239,13 @@ export class Tfmd extends React.Component {
 
       download('Rainbow_Toast_Debugging_' + String(makeid(7)), String(this.props.ftmdg + JSON.stringify(this_state_x1x2y1y2)));
       //手動驗證是否正確(框出需求)
-/*    .___                  .__                    .___                                                  
-  __| _/______  _  ______ |  |   _________     __| _/   ____ _____    ____ _____ ___  _______    ______
- / __ |/  _ \ \/ \/ /    \|  |  /  _ \__  \   / __ |  _/ ___\\__  \  /    \\__  \\  \/ /\__  \  /  ___/
-/ /_/ (  <_> )     /   |  \  |_(  <_> ) __ \_/ /_/ |  \  \___ / __ \|   |  \/ __ \\   /  / __ \_\___ \ 
-\____ |\____/ \/\_/|___|  /____/\____(____  /\____ |   \___  >____  /___|  (____  /\_/  (____  /____  >
-     \/                 \/                \/      \/       \/     \/     \/     \/           \/     \/ 
-     */
+      /*    .___                  .__                    .___                                                  
+        __| _/______  _  ______ |  |   _________     __| _/   ____ _____    ____ _____ ___  _______    ______
+       / __ |/  _ \ \/ \/ /    \|  |  /  _ \__  \   / __ |  _/ ___\\__  \  /    \\__  \\  \/ /\__  \  /  ___/
+      / /_/ (  <_> )     /   |  \  |_(  <_> ) __ \_/ /_/ |  \  \___ / __ \|   |  \/ __ \\   /  / __ \_\___ \ 
+      \____ |\____/ \/\_/|___|  /____/\____(____  /\____ |   \___  >____  /___|  (____  /\_/  (____  /____  >
+           \/                 \/                \/      \/       \/     \/     \/     \/           \/     \/ 
+           */
       var b = document.createElement('a');
       b.href = c.toDataURL("image/png");
       b.download = "mid_rec_" + String(makeid(7)) + ".png";
@@ -229,6 +255,12 @@ export class Tfmd extends React.Component {
       b.remove();
 
       //接著.......再說
+      var istart = 14;//14~17
+      for (var isi = 0; isi < 4; isi++) {
+        var inri = isi + istart;
+        document.getElementsByClassName("downloadTcanvas")[inri].click();
+
+      }
 
     });
   };

@@ -21,6 +21,10 @@ export function TableCCall(props) {
             <tr><td><Message compact>色塊10</Message></td><td><Welcome nClustersT={3}/></td></tr>
             <tr><td><Message compact>色塊11</Message></td><td><Welcome nClustersT={3}/></td></tr>
             <tr><td><Message compact>色塊12</Message></td><td><Welcome nClustersT={3}/></td></tr>
+            <tr><td><Message compact>yolo1</Message></td><td><Welcome nClustersT={4}/></td></tr>
+            <tr><td><Message compact>yolo2</Message></td><td><Welcome nClustersT={4}/></td></tr>
+            <tr><td><Message compact>yolo3</Message></td><td><Welcome nClustersT={4}/></td></tr>
+            <tr><td><Message compact>yolo4</Message></td><td><Welcome nClustersT={4}/></td></tr>
         </tbody>
     </table>
   </div>;
