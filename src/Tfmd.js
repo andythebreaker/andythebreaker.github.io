@@ -185,10 +185,10 @@ o888o                                                           .o. 88P         
         //}
         imagetmpca.src = c.toDataURL("image/png");
         tmpcactx.drawImage(imagetmpca, x1, y1, width, height, 0, 0, width, height);
-        document.getElementsByClassName('rtU')[14 + i].innerText = tmpca.toDataURL();
-        document.getElementsByClassName('rtW')[14 + i].innerText = width;
-        document.getElementsByClassName('rtH')[14 + i].innerText = height;
-        document.getElementsByClassName('reactTransRefresh')[14 + i].click();
+        document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL();
+        document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = width;
+        document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = height;
+        document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].click();
         tmpca.remove();
 
         // Draw the bounding box.
