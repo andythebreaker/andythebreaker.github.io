@@ -186,10 +186,8 @@ o888o                                                           .o. 88P         
         imagetmpca.src = c.toDataURL("image/png");
         tmpcactx.drawImage(imagetmpca, x1, y1, width, height, 0, 0, width, height);
         document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL("image/png");
-        document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = width;
-        document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = height;
-        document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].click();
-        tmpca.remove();
+
+        //////////////////////////////////////////////
 
         var downloadcanvasTMPdebug = document.createElement('a');
         downloadcanvasTMPdebug.href = tmpca.toDataURL("image/png");
@@ -198,6 +196,12 @@ o888o                                                           .o. 88P         
         downloadcanvasTMPdebug.click();
         document.body.removeChild(downloadcanvasTMPdebug);
         downloadcanvasTMPdebug.remove();
+        //////////////////////////////////////////////
+
+        document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = width;
+        document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = height;
+        document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].click();
+        tmpca.remove();
 
         // Draw the bounding box.
         ctx.strokeStyle = "#00FFFF";
