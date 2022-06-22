@@ -216,6 +216,7 @@ o888o                                                           .o. 88P         
                 document.getElementsByClassName('rtW')[tmpINS].innerText = width;
                 document.getElementsByClassName('rtH')[tmpINS].innerText = height;
                 document.getElementsByClassName('reactTransRefresh')[tmpINS].click();
+                break;
               }
             }
           }  //  tmpca.remove();
