@@ -180,12 +180,12 @@ o888o                                                           .o. 88P         
         var imagetmpca = new Image();
         imagetmpca.src = c.toDataURL("image/png");
         $(imagetmpca).load(() => {
-          var imagetmpca_P = $(this)[0];
+          //var imagetmpca_P = $(this)[0];
           var tmpca = document.createElement("canvas");
           var tmpcactx = tmpca.getContext('2d');
           tmpca.width = width;
           tmpca.height = height;
-          tmpcactx.drawImage(imagetmpca_P, x1, y1, width, height, 0, 0, width, height);
+          tmpcactx.drawImage(this, x1, y1, width, height, 0, 0, width, height);
           // document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL("image/png");
           //////////////////////////////////////////////
 
