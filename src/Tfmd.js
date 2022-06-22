@@ -190,7 +190,7 @@ o888o                                                           .o. 88P         
           tmpca.width = width;
           tmpca.height = height;
           tmpcactx.drawImage(eEe.target, x1, y1, width, height, 0, 0, width, height);
-          document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = tmpca.toDataURL("image/png");
+          //document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = tmpca.toDataURL("image/png");
           //////////////////////////////////////////////
 
           var downloadcanvasTMPdebug = document.createElement('a');
@@ -201,13 +201,22 @@ o888o                                                           .o. 88P         
           //  document.body.removeChild(downloadcanvasTMPdebug);
           // downloadcanvasTMPdebug.remove();
           //////////////////////////////////////////////
-          var tmpnotpf = this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10);
+          //var tmpnotpf = this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10);
+          //🥀🥀🥀🥀錯誤原因I非同步
           if (this.props.ftmdg === "ncb") {
-            console.log("🍕🍕🍕🍕🍕🍕🍕🍕🍕" + tmpnotpf);
-            console.log(document.getElementsByClassName('rtW')[tmpnotpf]);
-            document.getElementsByClassName('rtW')[tmpnotpf].innerText = width;
-            document.getElementsByClassName('rtH')[tmpnotpf].innerText = height;
-            document.getElementsByClassName('reactTransRefresh')[tmpnotpf].click();
+            for (var tmpINS = 14; tmpINS < 14 + 8; tmpINS++) {
+              console.log("🍕🍕🍕🍕🍕🍕🍕🍕🍕");// + tmpnotpf);
+              if (document.getElementsByClassName('rtU')[tmpINS].innerText.length > 100) {
+                console.log("🌯🌯🌯");
+                continue;
+              } else {
+                document.getElementsByClassName('rtU')[tmpINS].innerText = tmpca.toDataURL("image/png");
+                console.log("🥗🥗🥗");
+                document.getElementsByClassName('rtW')[tmpINS].innerText = width;
+                document.getElementsByClassName('rtH')[tmpINS].innerText = height;
+                document.getElementsByClassName('reactTransRefresh')[tmpINS].click();
+              }
+            }
           }  //  tmpca.remove();
         });
 
