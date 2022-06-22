@@ -400,8 +400,8 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                 downloadcanvasTMP.download = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('TLABLFD')[0].innerText + "_downloadcanvasT_" + String(makeid(7)) + ".png";
                 document.body.appendChild(downloadcanvasTMP);
                 downloadcanvasTMP.click();
-                document.body.removeChild(downloadcanvasTMP);
-                downloadcanvasTMP.remove();
+               // document.body.removeChild(downloadcanvasTMP);
+               // downloadcanvasTMP.remove();
               }}></button>
             </td>
             <td>
