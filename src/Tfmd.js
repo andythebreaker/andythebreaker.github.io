@@ -201,11 +201,13 @@ o888o                                                           .o. 88P         
           //  document.body.removeChild(downloadcanvasTMPdebug);
           // downloadcanvasTMPdebug.remove();
           //////////////////////////////////////////////
+          var tmpnotpf = this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10);
           if (this.props.ftmdg === "ncb") {
-            console.log("🍕🍕🍕🍕🍕🍕🍕🍕🍕");
-            document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = width;
-            document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = height;
-            document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].click();
+            console.log("🍕🍕🍕🍕🍕🍕🍕🍕🍕" + tmpnotpf);
+            console.log(document.getElementsByClassName('rtW')[tmpnotpf]);
+            document.getElementsByClassName('rtW')[tmpnotpf].innerText = width;
+            document.getElementsByClassName('rtH')[tmpnotpf].innerText = height;
+            document.getElementsByClassName('reactTransRefresh')[tmpnotpf].click();
           }  //  tmpca.remove();
         });
 
