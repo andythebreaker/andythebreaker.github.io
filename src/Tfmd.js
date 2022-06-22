@@ -1,6 +1,7 @@
 import React from "react";
 //import ReactDOM from "react-dom";
 import MagicDropzone from "react-magic-dropzone";
+import $ from 'jquery';
 //import { ci } from 'case-insensitive';
 import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
 import "./styles.css";
@@ -175,33 +176,33 @@ oo.ooooo.  oooo  oooo   888oooo.   888  oooo   .ooooo.     .8'     oooo  .oooo. 
  888                                                                888                                                                    888                                                   d"     YD                                                               888               888          
 o888o                                                           .o. 88P                                                                   o888o                                                  "Y88888P'                                                              o888o          .o. 88P          
                                                                 `Y888P                                                                                                                                                                                                                 `Y888P            */
-        var tmpca = document.createElement("canvas");
-        var tmpcactx = tmpca.getContext('2d');
-        tmpca.width = width;
-        tmpca.height = height;
+
         var imagetmpca = new Image();
-
-        //imagetmpca.onload = function(){
-        //}
         imagetmpca.src = c.toDataURL("image/png");
-        tmpcactx.drawImage(imagetmpca, x1, y1, width, height, 0, 0, width, height);
-        document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL("image/png");
+        $(imagetmpca).load(() => {
+          var imagetmpca_P = $(this)[0];
+          var tmpca = document.createElement("canvas");
+          var tmpcactx = tmpca.getContext('2d');
+          tmpca.width = width;
+          tmpca.height = height;
+          tmpcactx.drawImage(imagetmpca_P, x1, y1, width, height, 0, 0, width, height);
+          // document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL("image/png");
+          //////////////////////////////////////////////
 
-        //////////////////////////////////////////////
+          var downloadcanvasTMPdebug = document.createElement('a');
+          downloadcanvasTMPdebug.href = tmpca.toDataURL("image/png");
+          downloadcanvasTMPdebug.download = this.props.ftmdg + "_debug_downloadcanvasT_" + String(makeid(7)) + ".png";
+          document.body.appendChild(downloadcanvasTMPdebug);
+          downloadcanvasTMPdebug.click();
+          document.body.removeChild(downloadcanvasTMPdebug);
+          downloadcanvasTMPdebug.remove();
+          //////////////////////////////////////////////
 
-        var downloadcanvasTMPdebug = document.createElement('a');
-        downloadcanvasTMPdebug.href = tmpca.toDataURL("image/png");
-        downloadcanvasTMPdebug.download = this.props.ftmdg + "_debug_downloadcanvasT_" + String(makeid(7)) + ".png";
-        document.body.appendChild(downloadcanvasTMPdebug);
-        downloadcanvasTMPdebug.click();
-        document.body.removeChild(downloadcanvasTMPdebug);
-        downloadcanvasTMPdebug.remove();
-        //////////////////////////////////////////////
-
-        document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = width;
-        document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = height;
-        document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].click();
-        tmpca.remove();
+          // document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = width;
+          // document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = height;
+          //  document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].click();
+          tmpca.remove();
+        });
 
         // Draw the bounding box.
         ctx.strokeStyle = "#00FFFF";
