@@ -197,7 +197,6 @@ export class Welcome extends React.Component {
           /////////////////////////////
           var tmp_statz = t.state.canvasA;
           tmp_statz["pieDataNum"].push({
-            //TODO:add color to pie chart
             title: count[i][0],
             value: count[i][1],
             color: RGB2HTML(
@@ -394,10 +393,11 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                 /* console.log($(e.target).closest('.TLABLFD').text());
                  console.log($(e.target).closest('.TLABLFD'));
                  console.log($(e.target));*/
-                console.log(e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('TLABLFD'));
+                //console.log(e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('TLABLFD'));
                 var downloadcanvasTMP = document.createElement('a');
                 downloadcanvasTMP.href = this.canvasA.toDataURL("image/png");
-                downloadcanvasTMP.download = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('TLABLFD').innerText + "_downloadcanvasT_" + String(makeid(7)) + ".png";
+                //TODO:FIX HARD parentElement
+                downloadcanvasTMP.download = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('TLABLFD')[0].innerText + "_downloadcanvasT_" + String(makeid(7)) + ".png";
                 document.body.appendChild(downloadcanvasTMP);
                 downloadcanvasTMP.click();
                 document.body.removeChild(downloadcanvasTMP);
