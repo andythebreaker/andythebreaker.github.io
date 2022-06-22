@@ -392,7 +392,7 @@ export class Welcome extends React.Component {
                 //console.log(e.target)
                 var downloadcanvasTMP = document.createElement('a');
                 downloadcanvasTMP.href = this.canvasA.toDataURL("image/png");
-                downloadcanvasTMP.download = " downloadcanvasT_" + String(makeid(7)) + ".png";
+                downloadcanvasTMP.download = $(e.target).closest('.ui.compact.message').text() + " downloadcanvasT_" + String(makeid(7)) + ".png";
                 document.body.appendChild(downloadcanvasTMP);
                 downloadcanvasTMP.click();
                 document.body.removeChild(downloadcanvasTMP);

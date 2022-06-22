@@ -2,7 +2,7 @@ import React/*, { Component, useState }*/ from "react";
 //import { Rating, Message } from "semantic-ui-react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
-import $ from 'jquery';
+//import $ from 'jquery';
 import "./../css/swp.css"
 
 function windowsOBJ(innerHTML) {
@@ -88,8 +88,8 @@ export class UiPhone extends React.Component {
         <button
           className="Sw222"
           onClick={(e) => {
-            console.log("測試$$$$$$$");
-            console.log($(e.target).text());
+            //console.log("測試$$$$$$$");
+            //console.log($(e.target).text());
             fetch("./addHTML/swp.html", { /*設定request內容*/ })
               .then(res => res.text()) /*把request text化*/
               .then(dataFET => {
