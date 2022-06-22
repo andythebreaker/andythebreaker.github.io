@@ -202,6 +202,7 @@ o888o                                                           .o. 88P         
           // downloadcanvasTMPdebug.remove();
           //////////////////////////////////////////////
           if (this.props.ftmdg === "ncb") {
+            console.log("🍕🍕🍕🍕🍕🍕🍕🍕🍕");
             document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = width;
             document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = height;
             document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].click();
