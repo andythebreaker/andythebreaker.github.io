@@ -382,13 +382,15 @@ export class Welcome extends React.Component {
                 height={this.state.canvasA.canvasHeight}
               />
               <button className="downloadTcanvas" onClick={(e) => {
-                console.log(`    .___                  .__                    .___                                                  
-  __| _/______  _  ______ |  |   _________     __| _/   ____ _____    ____ _____ ___  _______    ______
- / __ |/  _ \ \/ \/ /    \|  |  /  _ \__  \   / __ |  _/ ___\\__  \  /    \\__  \\  \/ /\__  \  /  ___/
-/ /_/ (  <_> )     /   |  \  |_(  <_> ) __ \_/ /_/ |  \  \___ / __ \|   |  \/ __ \\   /  / __ \_\___ \ 
-\____ |\____/ \/\_/|___|  /____/\____(____  /\____ |   \___  >____  /___|  (____  /\_/  (____  /____  >
-     \/                 \/                \/      \/       \/     \/     \/     \/           \/     \/ 
-     `);
+                console.log(`
+d ss      sSSSs   d  d  b d s  b d        sSSSs   d s.   d ss    
+S   ~o   S     S  S  S  S S  S S S       S     S  S  ~O  S   ~o  
+S     b S       S S  S  S S   SS S      S       S S   'b S     b 
+S     S S       S S  S  S S    S S      S       S S sSSO S     S 
+S     P S       S S  S  S S    S S      S       S S    O S     P 
+S    S   S     S   S  S S S    S S       S     S  S    O S    S  
+P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
+                  `);
                 console.log($(e.target).closest('.ui.compact.message').text());
                 var downloadcanvasTMP = document.createElement('a');
                 downloadcanvasTMP.href = this.canvasA.toDataURL("image/png");
