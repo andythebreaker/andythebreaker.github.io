@@ -391,8 +391,8 @@ S     P S       S S  S  S S    S S      S       S S    O S     P
 S    S   S     S   S  S S S    S S       S     S  S    O S    S  
 P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                   `);
-                console.log($(e.target).closest('.ui.compact.message').text());
-                console.log($(e.target).closest('.ui.compact.message'));
+                console.log($(e.target).closest('.TLABLFD').text());
+                console.log($(e.target).closest('.TLABLFD'));
                 console.log($(e.target));
                 console.log(e.target);
                 var downloadcanvasTMP = document.createElement('a');
