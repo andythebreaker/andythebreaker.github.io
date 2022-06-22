@@ -21,6 +21,7 @@
     "image-slicer": "^1.1.0",
     "image-to-slices": "^0.1.3",
     "jimp": "^0.16.1",
+    "jquery": "^3.6.0",
     "opencv.js": "^1.2.1",
     "randomstring": "^1.2.2",
     "react": "^18.1.0",
