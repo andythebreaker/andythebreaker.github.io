@@ -115,8 +115,8 @@ export class Tfmd extends React.Component {
     a.download = "mid_px_" + String(makeid(7)) + ".png";
     document.body.appendChild(a);
     a.click();
-   // document.body.removeChild(a);
-   // a.remove();
+    // document.body.removeChild(a);
+    // a.remove();
     //}
     //DebugDownload(e.target.src);
 
@@ -150,6 +150,8 @@ export class Tfmd extends React.Component {
       for (i = 0; i < valid_detections_data; ++i) {
         document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText =
           String(parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) + 1);
+        console.log(this.props.ftmdg + ` document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText` + document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText);
+
         //document.getElementsByClassName('rs-play')[0].click()
         let [x1, y1, x2, y2] = boxes_data.slice(i * 4, (i + 1) * 4);
         var tmpxxyy1122 = { org: { x1: x1, x2: x2, y1: y1, y2: y2, }, mut: {}, klass: "n/a", score: "n/a" }
@@ -196,14 +198,14 @@ o888o                                                           .o. 88P         
           downloadcanvasTMPdebug.download = this.props.ftmdg + "_debug_downloadcanvasT_" + String(makeid(7)) + ".png";
           document.body.appendChild(downloadcanvasTMPdebug);
           downloadcanvasTMPdebug.click();
-        //  document.body.removeChild(downloadcanvasTMPdebug);
-         // downloadcanvasTMPdebug.remove();
+          //  document.body.removeChild(downloadcanvasTMPdebug);
+          // downloadcanvasTMPdebug.remove();
           //////////////////////////////////////////////
-
-          document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = width;
-          document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = height;
-          document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].click();
-        //  tmpca.remove();
+          if (this.props.ftmdg === "ncb") {
+            document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = width;
+            document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = height;
+            document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].click();
+          }  //  tmpca.remove();
         });
 
         // Draw the bounding box.
@@ -266,16 +268,16 @@ o888o                                                           .o. 88P         
       b.download = "mid_rec_" + String(makeid(7)) + ".png";
       document.body.appendChild(b);
       b.click();
-    //  document.body.removeChild(b);
-    //  b.remove();
+      //  document.body.removeChild(b);
+      //  b.remove();
 
       //接著.......再說
-      var istart = 14;//14~17&18192021(?)
-      for (var isi = 0; isi < 4 + 4; isi++) {
-        var inri = isi + istart;
-        document.getElementsByClassName("downloadTcanvas")[inri].click();
-
-      }
+      /* var istart = 14;//14~17&18192021(?)
+       for (var isi = 0; isi < 4 + 4; isi++) {
+         var inri = isi + istart;
+         document.getElementsByClassName("downloadTcanvas")[inri].click();
+ 
+       }*///這裡的下載會來不及
 
     });
   };

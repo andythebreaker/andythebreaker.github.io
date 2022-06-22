@@ -21,14 +21,14 @@ export function TableCCall(props) {
         <tr><td><Message compact className="TLABLFD">色塊10</Message></td><td><Welcome nClustersT={3} /></td></tr>
         <tr><td><Message compact className="TLABLFD">色塊11</Message></td><td><Welcome nClustersT={3} /></td></tr>
         <tr><td><Message compact className="TLABLFD">色塊12</Message></td><td><Welcome nClustersT={3} /></td></tr>
-        <tr><td><Message compact className="TLABLFD">yolo1a</Message></td><td><Welcome nClustersT={4} /></td></tr>
-        <tr><td><Message compact className="TLABLFD">yolo2a</Message></td><td><Welcome nClustersT={4} /></td></tr>
-        <tr><td><Message compact className="TLABLFD">yolo3a</Message></td><td><Welcome nClustersT={4} /></td></tr>
-        <tr><td><Message compact className="TLABLFD">yolo4a</Message></td><td><Welcome nClustersT={4} /></td></tr>
-        <tr><td><Message compact className="TLABLFD">yolo1b</Message></td><td><Welcome nClustersT={4} /></td></tr>
-        <tr><td><Message compact className="TLABLFD">yolo2b</Message></td><td><Welcome nClustersT={4} /></td></tr>
-        <tr><td><Message compact className="TLABLFD">yolo3b</Message></td><td><Welcome nClustersT={4} /></td></tr>
-        <tr><td><Message compact className="TLABLFD">yolo4b</Message></td><td><Welcome nClustersT={4} /></td></tr>
+        <tr><td><Message compact className="TLABLFD">yolo1</Message></td><td><Welcome nClustersT={4} /></td></tr>
+        <tr><td><Message compact className="TLABLFD">yolo2</Message></td><td><Welcome nClustersT={4} /></td></tr>
+        <tr><td><Message compact className="TLABLFD">yolo3</Message></td><td><Welcome nClustersT={4} /></td></tr>
+        <tr><td><Message compact className="TLABLFD">yolo4</Message></td><td><Welcome nClustersT={4} /></td></tr>
+        <tr><td><Message compact className="TLABLFD">yolo5</Message></td><td><Welcome nClustersT={4} /></td></tr>
+        <tr><td><Message compact className="TLABLFD">yolo6</Message></td><td><Welcome nClustersT={4} /></td></tr>
+        <tr><td><Message compact className="TLABLFD">yolo7</Message></td><td><Welcome nClustersT={4} /></td></tr>
+        <tr><td><Message compact className="TLABLFD">yolo8</Message></td><td><Welcome nClustersT={4} /></td></tr>
       </tbody>
     </table>
   </div>;

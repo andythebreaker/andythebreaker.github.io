@@ -402,6 +402,8 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                 downloadcanvasTMP.click();
                // document.body.removeChild(downloadcanvasTMP);
                // downloadcanvasTMP.remove();
+
+               //以上區間已棄用
               }}></button>
             </td>
             <td>
