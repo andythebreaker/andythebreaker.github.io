@@ -177,7 +177,7 @@ oo.ooooo.  oooo  oooo   888oooo.   888  oooo   .ooooo.     .8'     oooo  .oooo. 
 o888o                                                           .o. 88P                                                                   o888o                                                  "Y88888P'                                                              o888o          .o. 88P          
                                                                 `Y888P                                                                                                                                                                                                                 `Y888P            */
 
-        var imagetmpca = new Image();
+        var imagetmpca = document.createElement('img');// new Image();
         imagetmpca.src = c.toDataURL("image/png");
         $(imagetmpca).load(() => {
           //var imagetmpca_P = $(this)[0];
@@ -185,7 +185,7 @@ o888o                                                           .o. 88P         
           var tmpcactx = tmpca.getContext('2d');
           tmpca.width = width;
           tmpca.height = height;
-          tmpcactx.drawImage(this, x1, y1, width, height, 0, 0, width, height);
+          tmpcactx.drawImage($(this)[0], x1, y1, width, height, 0, 0, width, height);
           // document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL("image/png");
           //////////////////////////////////////////////
 
