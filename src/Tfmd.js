@@ -1,7 +1,7 @@
 import React from "react";
 //import ReactDOM from "react-dom";
 import MagicDropzone from "react-magic-dropzone";
-import $ from 'jquery';
+//import $ from 'jquery';
 //import { ci } from 'case-insensitive';
 import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
 import "./styles.css";
