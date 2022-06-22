@@ -148,6 +148,8 @@ export class Tfmd extends React.Component {
       var i;
       var this_state_x1x2y1y2 = [];
       for (i = 0; i < valid_detections_data; ++i) {
+        document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText =
+          String(parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) + 1);
         //document.getElementsByClassName('rs-play')[0].click()
         let [x1, y1, x2, y2] = boxes_data.slice(i * 4, (i + 1) * 4);
         var tmpxxyy1122 = { org: { x1: x1, x2: x2, y1: y1, y2: y2, }, mut: {}, klass: "n/a", score: "n/a" }
@@ -186,7 +188,7 @@ o888o                                                           .o. 88P         
           tmpca.width = width;
           tmpca.height = height;
           tmpcactx.drawImage(eEe.target, x1, y1, width, height, 0, 0, width, height);
-          // document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL("image/png");
+          document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = tmpca.toDataURL("image/png");
           //////////////////////////////////////////////
 
           var downloadcanvasTMPdebug = document.createElement('a');
@@ -198,9 +200,9 @@ o888o                                                           .o. 88P         
           downloadcanvasTMPdebug.remove();
           //////////////////////////////////////////////
 
-          // document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = width;
-          // document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = height;
-          //  document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].click();
+          document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = width;
+          document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].innerText = height;
+          document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10)].click();
           tmpca.remove();
         });
 
@@ -319,6 +321,7 @@ o888o                                                           .o. 88P         
         </div>
         <AlwaysOnBottomFooter lr={this.state.lf} children={JSON.stringify(this.state.x1x2y1y2)} />
         <ToastContainer />
+        <h5 className="youcanthavefunctionsinloops" ref={(youcanthavefunctionsinloops) => (this.youcanthavefunctionsinloops = youcanthavefunctionsinloops)}>0</h5>
       </div>
     );
   }
