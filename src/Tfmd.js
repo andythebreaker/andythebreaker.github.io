@@ -204,6 +204,7 @@ o888o                                                           .o. 88P         
           //var tmpnotpf = this.props.ftmdg === "ncb" ? 14 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10) : 18 + parseInt(document.getElementsByClassName('youcanthavefunctionsinloops')[this.props.ftmdg === "ncb" ? 0 : 1].innerText, 10);
           //🥀🥀🥀🥀錯誤原因I非同步
           if (this.props.ftmdg === "ncb") {
+            console.log("🥠🥠🥠");
             for (var tmpINS = 14; tmpINS < 14 + 8; tmpINS++) {
               console.log("🍕🍕🍕🍕🍕🍕🍕🍕🍕");// + tmpnotpf);
               if (document.getElementsByClassName('rtU')[tmpINS].innerText.length > 100) {
