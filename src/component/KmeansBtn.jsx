@@ -382,17 +382,17 @@ export class Welcome extends React.Component {
                 height={this.state.canvasA.canvasHeight}
               />
               <button className="downloadTcanvas" onClick={(e) => {
-                /*    .___                  .__                    .___                                                  
+                console.log(`    .___                  .__                    .___                                                  
   __| _/______  _  ______ |  |   _________     __| _/   ____ _____    ____ _____ ___  _______    ______
  / __ |/  _ \ \/ \/ /    \|  |  /  _ \__  \   / __ |  _/ ___\\__  \  /    \\__  \\  \/ /\__  \  /  ___/
 / /_/ (  <_> )     /   |  \  |_(  <_> ) __ \_/ /_/ |  \  \___ / __ \|   |  \/ __ \\   /  / __ \_\___ \ 
 \____ |\____/ \/\_/|___|  /____/\____(____  /\____ |   \___  >____  /___|  (____  /\_/  (____  /____  >
      \/                 \/                \/      \/       \/     \/     \/     \/           \/     \/ 
-     */
-                //console.log(e.target)
+     `);
+                console.log($(e.target).closest('.ui.compact.message').text());
                 var downloadcanvasTMP = document.createElement('a');
                 downloadcanvasTMP.href = this.canvasA.toDataURL("image/png");
-                downloadcanvasTMP.download = $(e.target).closest('.ui.compact.message').text() + " downloadcanvasT_" + String(makeid(7)) + ".png";
+                downloadcanvasTMP.download = $(e.target).closest('.ui.compact.message').text() + "_downloadcanvasT_" + String(makeid(7)) + ".png";
                 document.body.appendChild(downloadcanvasTMP);
                 downloadcanvasTMP.click();
                 document.body.removeChild(downloadcanvasTMP);
