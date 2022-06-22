@@ -391,13 +391,13 @@ S     P S       S S  S  S S    S S      S       S S    O S     P
 S    S   S     S   S  S S S    S S       S     S  S    O S    S  
 P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                   `);
-                console.log($(e.target).closest('.TLABLFD').text());
-                console.log($(e.target).closest('.TLABLFD'));
-                console.log($(e.target));
-                console.log(e.target);
+                /* console.log($(e.target).closest('.TLABLFD').text());
+                 console.log($(e.target).closest('.TLABLFD'));
+                 console.log($(e.target));*/
+                console.log(e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('TLABLFD'));
                 var downloadcanvasTMP = document.createElement('a');
                 downloadcanvasTMP.href = this.canvasA.toDataURL("image/png");
-                downloadcanvasTMP.download = $(e.target).closest('.TLABLFD').text() + "_downloadcanvasT_" + String(makeid(7)) + ".png";
+                downloadcanvasTMP.download = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('TLABLFD').innerText + "_downloadcanvasT_" + String(makeid(7)) + ".png";
                 document.body.appendChild(downloadcanvasTMP);
                 downloadcanvasTMP.click();
                 document.body.removeChild(downloadcanvasTMP);
