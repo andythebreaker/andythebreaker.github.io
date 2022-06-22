@@ -255,8 +255,8 @@ o888o                                                           .o. 88P         
       b.remove();
 
       //接著.......再說
-      var istart = 14;//14~17
-      for (var isi = 0; isi < 4; isi++) {
+      var istart = 14;//14~17&18192021(?)
+      for (var isi = 0; isi < 4+4; isi++) {
         var inri = isi + istart;
         document.getElementsByClassName("downloadTcanvas")[inri].click();
 
