@@ -179,13 +179,13 @@ o888o                                                           .o. 88P         
 
         var imagetmpca = document.createElement('img');// new Image();
         imagetmpca.src = c.toDataURL("image/png");
-        $(imagetmpca).load(() => {
+        imagetmpca.addEventListener('load', (eEe) => {//not on load ~~ https://stackoverflow.com/questions/14885324/what-is-the-best-way-to-detect-an-image-download-completion-onload-or-addevent
           //var imagetmpca_P = $(this)[0];
           var tmpca = document.createElement("canvas");
           var tmpcactx = tmpca.getContext('2d');
           tmpca.width = width;
           tmpca.height = height;
-          tmpcactx.drawImage($(this)[0], x1, y1, width, height, 0, 0, width, height);
+          tmpcactx.drawImage(eEe.target, x1, y1, width, height, 0, 0, width, height);
           // document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL("image/png");
           //////////////////////////////////////////////
 
