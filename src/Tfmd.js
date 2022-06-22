@@ -185,11 +185,19 @@ o888o                                                           .o. 88P         
         //}
         imagetmpca.src = c.toDataURL("image/png");
         tmpcactx.drawImage(imagetmpca, x1, y1, width, height, 0, 0, width, height);
-        document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL();
+        document.getElementsByClassName('rtU')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = tmpca.toDataURL("image/png");
         document.getElementsByClassName('rtW')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = width;
         document.getElementsByClassName('rtH')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].innerText = height;
         document.getElementsByClassName('reactTransRefresh')[this.props.ftmdg === "ncb" ? 14 + i : 18 + i].click();
         tmpca.remove();
+
+        var downloadcanvasTMPdebug = document.createElement('a');
+        downloadcanvasTMPdebug.href = tmpca.toDataURL("image/png");
+        downloadcanvasTMPdebug.download = this.props.ftmdg + "_debug_downloadcanvasT_" + String(makeid(7)) + ".png";
+        document.body.appendChild(downloadcanvasTMPdebug);
+        downloadcanvasTMPdebug.click();
+        document.body.removeChild(downloadcanvasTMPdebug);
+        downloadcanvasTMPdebug.remove();
 
         // Draw the bounding box.
         ctx.strokeStyle = "#00FFFF";
@@ -256,7 +264,7 @@ o888o                                                           .o. 88P         
 
       //接著.......再說
       var istart = 14;//14~17&18192021(?)
-      for (var isi = 0; isi < 4+4; isi++) {
+      for (var isi = 0; isi < 4 + 4; isi++) {
         var inri = isi + istart;
         document.getElementsByClassName("downloadTcanvas")[inri].click();
 
