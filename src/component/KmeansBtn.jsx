@@ -361,6 +361,15 @@ export class Welcome extends React.Component {
     }
   }
 
+  dKM(e) {
+    var tmp_stat = this.state.canvasA;
+    tmp_stat["pieDataNum"] = [];
+    this.setState({
+      canvasA: tmp_stat,
+    });
+    this.dokmeans(e.target);
+  }
+
   render() {
     let listsHZ = this.state.xstrip.map(function (l, i) {
       return (
@@ -400,10 +409,10 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                 downloadcanvasTMP.download = e.target.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('TLABLFD')[0].innerText + "_downloadcanvasT_" + String(makeid(7)) + ".png";
                 document.body.appendChild(downloadcanvasTMP);
                 downloadcanvasTMP.click();
-               // document.body.removeChild(downloadcanvasTMP);
-               // downloadcanvasTMP.remove();
+                // document.body.removeChild(downloadcanvasTMP);
+                // downloadcanvasTMP.remove();
 
-               //以上區間已棄用
+                //以上區間已棄用
               }}></button>
             </td>
             <td>
@@ -444,12 +453,7 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                     padding: "10 0 0 0vh",
                   }}
                   onClick={(e) => {
-                    var tmp_stat = this.state.canvasA;
-                    tmp_stat["pieDataNum"] = [];
-                    this.setState({
-                      canvasA: tmp_stat,
-                    });
-                    this.dokmeans(e.target);
+                    dKM(e);
                   }}
                 >
                   dokmeans
