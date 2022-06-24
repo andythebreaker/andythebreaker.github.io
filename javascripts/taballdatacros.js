@@ -13,7 +13,7 @@ $(document).ready(function () {
                 ary12.push(deltaE(JSON.parse(event.target.innerText), JSON.parse(element_sttisafn_.innerText)));
             }
             document.getElementsByClassName('back-to-top2').innerText =
-                JSON.stringify(JSON.parse(document.getElementsByClassName('back-to-top2').innerText).push({
+                JSON.stringify(JSON.parse(document.getElementsByClassName('back-to-top2')[0].innerText).push({
                     idx: index_sttisafn - 14,
                     clonum: findIndexOfMinMax(ary12).minIndex
                 }));
