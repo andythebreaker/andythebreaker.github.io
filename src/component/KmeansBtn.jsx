@@ -17,6 +17,7 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 //import Paper from "@mui/material/Paper";
 import { MyBtnComp } from "./MyBtn.jsx";
+src/functionalUnit/postInstall/color.js
 //-import { DebugDownload } from './../functionalUnit/debugDownload.js'
 //import { ImgStrip } from "./ImageStrip.jsx";
 //import ReactJson from "react-json-view";
@@ -521,7 +522,7 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                       />
                     </TableCell>
                     <TableCell>
-                      {this.state.canvasA.pieDataNum} </TableCell>
+                      {JSON.stringify(this.state.canvasA.pieDataNum)} </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
