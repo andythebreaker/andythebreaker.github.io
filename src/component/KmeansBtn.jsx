@@ -180,6 +180,8 @@ export class Welcome extends React.Component {
     this.setState({
       canvasA: tmp_stat,
     });
+    this.dKM(this.dKMR);
+    console.log("🍴🍴");
   }
 
   dokmeans(et) {
@@ -361,13 +363,13 @@ export class Welcome extends React.Component {
     }
   }
 
-  dKM(e) {
+  dKM(et) {
     var tmp_stat = this.state.canvasA;
     tmp_stat["pieDataNum"] = [];
     this.setState({
       canvasA: tmp_stat,
     });
-    this.dokmeans(e.target);
+    this.dokmeans(et);
   }
 
   render() {
@@ -445,6 +447,7 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
               </div>
               <Stack spacing={2} direction="row">
                 <Button
+                  ref={(dKMR) => (this.dKMR = dKMR)}
                   color="secondary"
                   variant="text"
                   style={{
@@ -453,7 +456,8 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                     padding: "10 0 0 0vh",
                   }}
                   onClick={(e) => {
-                    dKM(e);
+                    this.dKM(e.target);
+                    console.log("🍚🍚");
                   }}
                 >
                   dokmeans
