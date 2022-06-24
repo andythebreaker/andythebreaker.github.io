@@ -228,6 +228,7 @@ move to react!
   ===================================
   */
   const status16 = useScript("./javascripts/swp.js");
+  const status17 = useScript("https://cdn.jsdelivr.net/gh/antimatter15/rgb-lab@master/color.js");
 
   return (
     <div className="App">
@@ -261,6 +262,7 @@ move to react!
                 Script status14: <b>{status14}</b>
                 Script status15: <b>{status15}</b>
                 Script status16: <b>{status16}</b>
+                Script status16: <b>{status17}</b>
                 {status0 === "ready" &&
                   status1 === "ready" &&
                   status2 === "ready" &&
@@ -277,6 +279,7 @@ move to react!
                   status14 === "ready" &&
                   status15 === "ready" &&
                   status16 === "ready" &&
+                  status17 === "ready" &&
                   (
                     <div>
                       <p>這裡面的東西就是已經載入外部JS了</p>
