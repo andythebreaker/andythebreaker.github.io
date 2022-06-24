@@ -12,7 +12,7 @@ $(document).ready(function () {
                 const element_sttisafn_ = step_through_the_iron_shoes_and_find_nowhere_[index_sttisafn_];
                 ary12.push(deltaE(JSON.parse(event.target.innerText), JSON.parse(element_sttisafn_.innerText)));
             }
-            document.getElementsByClassName('back-to-top2').innerText =
+            document.getElementsByClassName('back-to-top2')[0].innerText =
                 JSON.stringify(JSON.parse(document.getElementsByClassName('back-to-top2')[0].innerText).push({
                     idx: index_sttisafn - 14,
                     clonum: findIndexOfMinMax(ary12).minIndex
