@@ -520,6 +520,8 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                         data={this.state.canvasA.pieDataNum}
                       />
                     </TableCell>
+                    <TableCell>
+                      {this.state.canvasA.pieDataNum} </TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
