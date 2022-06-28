@@ -42,7 +42,7 @@ export class AlwaysOnTOPF extends PureComponent {
         onClick={this.state.onclickFucn}
         style={this.props.style}
       >
-        {this.props.children || `{"ans":[]}`}
+       {`{"ans":[]}`}
       </Button><Speech text={this.props.children} voice="Google UK English Female" /></div>
     );
   }
