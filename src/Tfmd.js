@@ -4,6 +4,7 @@ import MagicDropzone from "react-magic-dropzone";
 //import $ from 'jquery';
 //import { ci } from 'case-insensitive';
 import { AlwaysOnBottomFooter } from "./component/alwaysOnBottomFooter.jsx"
+import { AlwaysOnTOPF } from "./component/alwaysOnTOPF.jsx"
 import "./styles.css";
 import { ToastContainer, toast } from 'react-toastify';
 //-import { DebugDownload } from './functionalUnit/debugDownload.js'
@@ -336,6 +337,7 @@ o888o                                                           .o. 88P         
           )}
         </div>
         <AlwaysOnBottomFooter lr={this.state.lf} children={JSON.stringify(this.state.x1x2y1y2)} />
+        <AlwaysOnTOPF />
         <ToastContainer />
         <h5 className="youcanthavefunctionsinloops" ref={(youcanthavefunctionsinloops) => (this.youcanthavefunctionsinloops = youcanthavefunctionsinloops)}>0</h5>
       </div>

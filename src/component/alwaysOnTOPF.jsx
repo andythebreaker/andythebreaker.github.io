@@ -6,14 +6,14 @@ import Speech from 'react-speech';
 const Button = styled.button({
   fontSize: "5px",
   position: "fixed",
-  top: "95vh",//bottom
-  //top: "0vh",//top
-  left: `${props => (props.lr)}`,
-  //left: "89vw",//right
+  //top: "95vh",//bottom
+  top: "0vh",//top
+  //left: `${props => (props.lr)}`,
+  left: "50vw",//right1/2
   margin: "0vh 0vh 0vw 0vw",
   borderRadius: "0%",
   border: "none",
-  opacity: "0.4",
+  opacity: "0.88",
   visibility: "visible",
   cursor: "pointer",
   outline: "none",
@@ -22,7 +22,7 @@ const Button = styled.button({
   width: "50vw",
 });
 
-export class AlwaysOnBottomFooter extends PureComponent {
+export class AlwaysOnTOPF extends PureComponent {
 
   constructor(props) {
     super(props);
@@ -38,11 +38,11 @@ export class AlwaysOnBottomFooter extends PureComponent {
   render() {
     return (<div>
       <Button
-        className="back-to-top2"
+        className="BTTNF"
         onClick={this.state.onclickFucn}
         style={this.props.style}
       >
-        {this.props.children || "MDinfo"}
+        {this.props.children || "[]"}
       </Button><Speech text={this.props.children} voice="Google UK English Female" /></div>
     );
   }
