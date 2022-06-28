@@ -10,6 +10,8 @@ $(document).ready(function () {
             var ary12 = [];
             for (let index_sttisafn_ = 2; index_sttisafn_ < 14; index_sttisafn_++) {
                 const element_sttisafn_ = step_through_the_iron_shoes_and_find_nowhere_[index_sttisafn_];
+                console.log("event.target.innerText");
+                console.log(event.target.innerText);
                 ary12.push(deltaE(JSON.parse(event.target.innerText), JSON.parse(element_sttisafn_.innerText)));
             }
             document.getElementsByClassName('back-to-top2')[0].innerText =
