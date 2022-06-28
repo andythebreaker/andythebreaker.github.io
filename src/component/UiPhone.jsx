@@ -3,6 +3,7 @@ import React/*, { Component, useState }*/ from "react";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 //import $ from 'jquery';
+import { AlwaysOnTOPF } from "./alwaysOnTOPF.jsx"
 import "./../css/swp.css"
 
 function windowsOBJ(innerHTML) {
@@ -121,6 +122,7 @@ export class UiPhone extends React.Component {
         >
           SW222
         </button>
+        <AlwaysOnTOPF />
       </div>
     );
   }
