@@ -13,11 +13,11 @@ $(document).ready(function () {
                 ary12.push(deltaE(JSON.parse(element_sttisafn.innerText), JSON.parse(element_sttisafn_.innerText)));
             }
             console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            console.log(document.getElementsByClassName('back-to-top2')[1].innerText);
-            console.log(JSON.parse(document.getElementsByClassName('back-to-top2')[1].innerText));
-            document.getElementsByClassName('back-to-top2')[1].innerText =
+            console.log(JSON.parse(document.getElementsByClassName('BTTNF')[0].innerText));
+            console.log(JSON.parse(document.getElementsByClassName('BTTNF')[0].innerText).ans);
+            document.getElementsByClassName('BTTNF')[0].innerText =
                 JSON.stringify(
-                    JSON.parse(document.getElementsByClassName('back-to-top2')[1].innerText).push(
+                    JSON.parse(document.getElementsByClassName('BTTNF')[0].innerText).ans.push(
                         {
                             idx: index_sttisafn - 14,
                             clonum: findIndexOfMinMax(ary12).minIndex
