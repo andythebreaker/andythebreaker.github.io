@@ -522,7 +522,7 @@ P ss"     "sss"     "ss"S P    P P sSSs   "sss"   P    P P ss"
                     </TableCell>
                     <TableCell>
                       <h5>lab</h5><h5 className="step_through_the_iron_shoes_and_find_nowhere">
-                        {findLargePie(this.state.canvasA.pieDataNum)}</h5>
+                        {JSON.stringify(findLargePie(this.state.canvasA.pieDataNum))}</h5>
                     </TableCell>
                   </TableRow>
                 </TableBody>
