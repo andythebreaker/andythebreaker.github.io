@@ -19,6 +19,19 @@ $(document).ready(function () {
             console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             console.log(JSON.parse(document.getElementsByClassName('QFF')[0].innerText));
             console.log(JSON.parse(document.getElementsByClassName('QFF')[0].innerText).ans);
+            console.log(JSON.parse(document.getElementsByClassName('QFF')[0].innerText).ans.push(
+                {
+                    idx: index_sttisafn - 14,
+                    clonum: findIndexOfMinMax(ary12).minIndex
+                }
+            )); console.log(JSON.stringify(
+                JSON.parse(document.getElementsByClassName('QFF')[0].innerText).ans.push(
+                    {
+                        idx: index_sttisafn - 14,
+                        clonum: findIndexOfMinMax(ary12).minIndex
+                    }
+                )
+            ));
             document.getElementsByClassName('QFF')[0].innerText =
                 JSON.stringify(
                     JSON.parse(document.getElementsByClassName('QFF')[0].innerText).ans.push(
