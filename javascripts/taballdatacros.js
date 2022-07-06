@@ -1,4 +1,5 @@
-$(document).ready(function () {
+function MONEY_document_ready() {
+
     console.log("ready!");
     var BF2 = document.createElement('div');
     BF2.classList.add('QFF');
@@ -29,7 +30,7 @@ $(document).ready(function () {
             );
         }, false);
     }
-});
+}//);
 
 function findIndexOfMinMax(arr) {
     let minIndex = 0;
@@ -52,3 +53,17 @@ function findIndexOfMinMax(arr) {
         maxIndex
     };
 }
+
+function deferJQ(method) {
+    if (window.jQuery) {
+        method();
+    } else {
+        setTimeout(function () { defer(method) }, 50);
+    }
+}
+
+
+defer(function () {
+    console.log("jQuery is now loaded");
+    MONEY_document_ready();
+});
