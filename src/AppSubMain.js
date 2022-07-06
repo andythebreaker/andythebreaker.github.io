@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { KMeans } from 'scikitjs'
 import { TableCCall } from './component/TableColorCrecAll.jsx'
 import { UiPhone } from './component/UiPhone.jsx'
+import './css/QFF.css'
 let X = [
   [1, 2, 7],
   [1, 4, 7],
