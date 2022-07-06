@@ -1,0 +1,28 @@
+.QFF {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 4px 4px 9px #2E8B57;
+    -moz-box-shadow: 4px 4px 9px #2E8B57;
+    box-shadow: 4px 4px 9px #2E8B57;
+    text-shadow: 1px 1px 1px #FFFF00;
+    -webkit-transform: rotate(2deg) scale(1.1) skew(-2deg, -1deg);
+    -moz-transform: rotate(2deg) scale(1.1) skew(-2deg, -1deg);
+    -o-transform: rotate(2deg) scale(1.1) skew(-2deg, -1deg);
+    background-image: -moz-linear-gradient(top, #FFC0CB, #AFEEEE 86%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.00, #FFC0CB), color-stop(0.86, #AFEEEE));
+    border: 2px solid #A52A2A;
+    background-color: #DDDDDD;
+    padding: 10px;
+    z-index: 10;
+    opacity: 0.7;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 12pt;
+    color: #888888;
+    text-align: center;
+    outline: 2px solid #6495ED;
+    outline-offset: 2px;
+    position: fixed;
+    left: 50vw;
+    top: 0vh;
+}

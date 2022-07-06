@@ -1,5 +1,9 @@
 $(document).ready(function () {
     console.log("ready!");
+    var BF2 = document.createElement('div');
+    BF2.classList.add('QFF');
+    BF2.innerText = `{"ans":[]}`;
+    document.body.appendChild(BF2);
     var step_through_the_iron_shoes_and_find_nowhere = document.getElementsByClassName('step_through_the_iron_shoes_and_find_nowhere');
     for (let index_sttisafn = 14; index_sttisafn < step_through_the_iron_shoes_and_find_nowhere.length; index_sttisafn++) {
         const element_sttisafn = step_through_the_iron_shoes_and_find_nowhere[index_sttisafn];
@@ -13,11 +17,11 @@ $(document).ready(function () {
                 ary12.push(deltaE(JSON.parse(element_sttisafn.innerText), JSON.parse(element_sttisafn_.innerText)));
             }
             console.log("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            console.log(JSON.parse(document.getElementsByClassName('BTTNF')[0].innerText));
-            console.log(JSON.parse(document.getElementsByClassName('BTTNF')[0].innerText).ans);
-            document.getElementsByClassName('BTTNF')[0].innerText =
+            console.log(JSON.parse(document.getElementsByClassName('QFF')[0].innerText));
+            console.log(JSON.parse(document.getElementsByClassName('QFF')[0].innerText).ans);
+            document.getElementsByClassName('QFF')[0].innerText =
                 JSON.stringify(
-                    JSON.parse(document.getElementsByClassName('BTTNF')[0].innerText).ans.push(
+                    JSON.parse(document.getElementsByClassName('QFF')[0].innerText).ans.push(
                         {
                             idx: index_sttisafn - 14,
                             clonum: findIndexOfMinMax(ary12).minIndex
