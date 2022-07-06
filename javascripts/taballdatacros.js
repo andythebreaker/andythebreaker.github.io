@@ -65,7 +65,7 @@ function deferJQ(method) {
 }
 
 
-defer(function () {
+deferJQ(function () {
     console.log("jQuery is now loaded");
 
 });
