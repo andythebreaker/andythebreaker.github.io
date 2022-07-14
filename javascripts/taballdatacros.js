@@ -67,5 +67,5 @@ function deferJQ(method) {
 
 deferJQ(function () {
     console.log("jQuery is now loaded");
-
+MONEY_document_ready();
 });
