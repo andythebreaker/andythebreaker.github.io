@@ -56,3 +56,21 @@
 ~~### solved~~
 
 ~~[chrome-navigator-mediadevices-getusermedia-is-not-a-function](https://stackoverflow.com/questions/37315361/chrome-navigator-mediadevices-getusermedia-is-not-a-function)~~
+
+# inject
+
+> use puppeter to console do it
+
+see:
+```
+./src/appMain.js
+```
+
+關鍵:
+
+```
+ document.getElementById("cvstart0BTON").innerText = imageSrc;
+            document.getElementById("cvstart0BTON").click();
+```
+
+醬子就不用實體鏡頭
