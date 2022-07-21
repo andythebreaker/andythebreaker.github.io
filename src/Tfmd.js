@@ -165,6 +165,7 @@ export class Tfmd extends React.Component {
         const width = x2 - x1;
         const height = y2 - y1;
         const klass = names[classes_data[i]];
+        console.log("167:"+klass+"#");
         const score = scores_data[i].toFixed(2);
 
         tmpxxyy1122["klass"] = klass;
@@ -245,6 +246,7 @@ o888o                                                           .o. 88P         
         x1 *= c.width;
         y1 *= c.height;
         const klass = names[classes_data[i]];
+        console.log("248:"+klass+"#");
         const score = scores_data[i].toFixed(2);
 
         // Draw the text last to ensure it's on top.
