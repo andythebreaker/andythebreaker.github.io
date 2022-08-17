@@ -85,7 +85,7 @@ block content
           .ui.vertical.borderless.fluid.text.menu
             // show all...etc
             a.item(class=alpha === "1" ? "active" : "" data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]+`?alpha=1`") 現期期刊
-            a.item(class=alpha === "0" ? "active" : "" data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]") 所有期刊
+            a.item(class=alpha === "0" ? "active" : "" data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]") Code Tip
             a.item(style="display:none;" class=alpha === "2" ? "active" : "" data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]+`?alpha=2`") 電子期刊
             a.item(style="display:none;" class=alpha === "3" ? "active" : "" data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]+`?alpha=3`") 紙本期刊
             a.item(style="display:none;" class=(alpha === "0" ? "active" : "") onclick='$(".Viewbycategory").slideToggle()') 按類別檢視
@@ -138,7 +138,7 @@ block content
           //20220310更，按客戶需求VVVVVVVVVVVVVVVVVVVVV
           .Viewbycategory.ui.hidden.section.divider(style='display:none;')
           .row
-            h1.ui.huge.dividing.header 所有期刊
+            h1.ui.huge.dividing.header Code Tip
               button.ui.button.yellow(onclick="$('.Viewbycategory').show();Swal.fire({showDenyButton: true,showCancelButton: false,confirmButtonText: '好',denyButtonText: `取消分析模式(顯示全部資料)`,width: 0.75*vw,title: document.getElementById('VD1').innerHTML,icon: 'info',html: document.getElementById('VD2').innerHTML}).then((result) => {/* Read more about isConfirmed, isDenied below */if (result.isConfirmed) {console.log('no action')} else if (result.isDenied) {window.location.href = '/main/journals';}});$('.Viewbycategory').hide();")
                 | #{`顯示重複資料分析 目前分析模式:${(alpha === "duplicate0") ? '架號重複':(alpha === "duplicate1") ? 'ISSN重複':(alpha === "duplicate2") ? 'ISSN重複':(alpha === "duplicate3") ? 'E-ISSN重複':'全部(無分析)'}模式`}
           .row
