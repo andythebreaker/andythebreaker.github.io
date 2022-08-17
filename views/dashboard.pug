@@ -123,12 +123,12 @@ block content
                 li(class=alpha === "duplicate1" ? "active" : "")
                   a(data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]+`?alpha=duplicate1`")
                     label
-                      h4 ISSN重複
+                      h4 系統重複
                       //| 資料將展示於下方表格
                 li(class=alpha === "duplicate2" ? "active" : "")
                   a(data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]+`?alpha=duplicate2`")
                     label
-                      h4 E-ISSN重複
+                      h4 E-系統重複
                       //| 資料將展示於下方表格
                 li(class=alpha === "duplicate3" ? "active" : "")
                   a(data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]+`?alpha=duplicate3`")
@@ -140,7 +140,7 @@ block content
           .row
             h1.ui.huge.dividing.header Code Tip
               button.ui.button.yellow(onclick="$('.Viewbycategory').show();Swal.fire({showDenyButton: true,showCancelButton: false,confirmButtonText: '好',denyButtonText: `取消分析模式(顯示全部資料)`,width: 0.75*vw,title: document.getElementById('VD1').innerHTML,icon: 'info',html: document.getElementById('VD2').innerHTML}).then((result) => {/* Read more about isConfirmed, isDenied below */if (result.isConfirmed) {console.log('no action')} else if (result.isDenied) {window.location.href = '/main/journals';}});$('.Viewbycategory').hide();")
-                | #{`顯示重複資料分析 目前分析模式:${(alpha === "duplicate0") ? '語言重複':(alpha === "duplicate1") ? 'ISSN重複':(alpha === "duplicate2") ? 'ISSN重複':(alpha === "duplicate3") ? 'E-ISSN重複':'全部(無分析)'}模式`}
+                | #{`顯示重複資料分析 目前分析模式:${(alpha === "duplicate0") ? '語言重複':(alpha === "duplicate1") ? '系統重複':(alpha === "duplicate2") ? '系統重複':(alpha === "duplicate3") ? 'E-系統重複':'全部(無分析)'}模式`}
           .row
             // 底下這坨東西是設定表格應用程式的語言，消失吧!
             .select

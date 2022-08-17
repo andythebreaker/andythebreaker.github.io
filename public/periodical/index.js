@@ -1,5 +1,5 @@
 var INframeNumber;
-var INISSN;
+var IN系統;
 var INbookName;
 var INSTAT;
 var INES;
@@ -14,7 +14,7 @@ var INeissn;
 
 document.getElementById('submit').addEventListener('click', function () {
     INframeNumber = document.getElementById('frameNumber').value;
-    INISSN = document.getElementById('ISSN').value;
+    IN系統 = document.getElementById('系統').value;
     INbookName = document.getElementById('bookName').value;
     INSTAT = document.getElementById('STAT').value;
     INES = document.getElementById('ES').value;
@@ -29,7 +29,7 @@ document.getElementById('submit').addEventListener('click', function () {
 
     console.log("dats->");
     console.log(INframeNumber);
-    console.log(INISSN);
+    console.log(IN系統);
     console.log(INSTAT);
     console.log(INES);
     console.log(INPS);
@@ -41,7 +41,7 @@ document.getElementById('submit').addEventListener('click', function () {
     console.log("<-dats");
     $.post("/main/add_periodical", {
         frameNumber: INframeNumber,
-        ISSN: INISSN,
+        系統: IN系統,
         bookName: INbookName,
         STAT: INSTAT,
         ES: INES,
@@ -123,7 +123,7 @@ document.getElementById('isbnjson').addEventListener('click', function () {
     console.log("isbnjson");
     $.post("/tool/isbn2json", {
         //TODO:沒有做例外處理
-        isbn: document.getElementById('ISSN').value
+        isbn: document.getElementById('系統').value
     }, (res) => {
         document.getElementsByClassName("loader")[0].style.display = "none";
 
@@ -160,7 +160,7 @@ document.getElementById('isbnjson').addEventListener('click', function () {
     });
     $.post("/main/checkissnExistence", {
         //TODO:沒有做例外處理
-        isbn: document.getElementById('ISSN').value
+        isbn: document.getElementById('系統').value
     }, (res) => {
         //console.log(res);
         if(res==='yes'){
