@@ -164,7 +164,7 @@ function initTable() {
                 //valign: 'middle'
                 //},
                 {
-                    title: '語言',
+                    title: '架號',
                     field: 'placeNumber',
                     rowspan: 2,
                     align: 'center',
