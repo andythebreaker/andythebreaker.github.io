@@ -175,7 +175,7 @@ function initTable() {
                     //footerFormatter: totalTextFormatter
                 }
                 , {
-                    title: 'ISSN',
+                    title: '類別',
                     field: 'issn',
                     rowspan: 2,
                     align: 'center',
@@ -183,7 +183,7 @@ function initTable() {
                     sortable: true, searchable: true, formatter: LinkFormatter
                     //footerFormatter: totalTextFormatter
                 }, {
-                    title: 'E-ISSN',
+                    title: '系統框架',
                     field: 'eissn',
                     rowspan: 2,
                     align: 'center',
@@ -191,7 +191,7 @@ function initTable() {
                     sortable: true, searchable: true, formatter: LinkFormatter
                     //footerFormatter: totalTextFormatter
                 }, {
-                    title: '刊名',
+                    title: '名稱',
                     field: 'mainName',
                     rowspan: 2,
                     align: 'center',
@@ -208,7 +208,7 @@ function initTable() {
                     sortable: true, searchable: false, formatter: LinkFormatter
                     //footerFormatter: totalTextFormatter
                 }, {
-                    title: '電子資源',
+                    title: '程式碼',
                     field: 'eSource',
                     rowspan: 2,
                     align: 'center',
@@ -217,7 +217,7 @@ function initTable() {
                     formatter: LinkFormatter
                     //footerFormatter: totalTextFormatter
                 }, {
-                    title: '紙本資源',
+                    title: '參考',
                     field: 'pSource',
                     rowspan: 2,
                     align: 'center',
