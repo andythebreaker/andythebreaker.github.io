@@ -39,7 +39,7 @@ function operateFormatter(value, row, index) {
 window.operateEvents = {
     'click .like': function (e, value, row, index) {
         window.open(
-            `/main/add_periodical?EDITframeNumber=${Base64.encodeURI(row.placeNumber)}&EDIT系統=${Base64.encodeURI(row.issn)}&EDITbookName=${Base64.encodeURI(row.mainName)}&EDITeissn=${Base64.encodeURI(row.eissn)}&EDITSTAT=${Base64.encodeURI(row.stat)}&EDITES=${Base64.encodeURI(row.eSource)}&EDITPS=${Base64.encodeURI(row.pSource)}&EDITREMK=${Base64.encodeURI(row.someStuff)}&EDITLIVstart=${Base64.encodeURI(row.TIMEs)}&EDITLIVend=${Base64.encodeURI(row.TIMEe)}&EDITLIVx=${Base64.encodeURI(row.TIMEn)}&id=${row.id}`,
+            `/main/add_periodical?EDITframeNumber=${Base64.encodeURI(row.placeNumber)}&EDITISSN=${Base64.encodeURI(row.issn)}&EDITbookName=${Base64.encodeURI(row.mainName)}&EDITeissn=${Base64.encodeURI(row.eissn)}&EDITSTAT=${Base64.encodeURI(row.stat)}&EDITES=${Base64.encodeURI(row.eSource)}&EDITPS=${Base64.encodeURI(row.pSource)}&EDITREMK=${Base64.encodeURI(row.someStuff)}&EDITLIVstart=${Base64.encodeURI(row.TIMEs)}&EDITLIVend=${Base64.encodeURI(row.TIMEe)}&EDITLIVx=${Base64.encodeURI(row.TIMEn)}&id=${row.id}`,
             "_blank");
     },
     'click .remove': function (e, value, row, index) {
@@ -175,7 +175,7 @@ function initTable() {
                     //footerFormatter: totalTextFormatter
                 }
                 , {
-                    title: '系統',
+                    title: 'ISSN',
                     field: 'issn',
                     rowspan: 2,
                     align: 'center',
@@ -183,7 +183,7 @@ function initTable() {
                     sortable: true, searchable: true, formatter: LinkFormatter
                     //footerFormatter: totalTextFormatter
                 }, {
-                    title: 'E-系統',
+                    title: 'E-ISSN',
                     field: 'eissn',
                     rowspan: 2,
                     align: 'center',

@@ -8,7 +8,7 @@ var JournalInformationSchema = mongoose.Schema({
     frameNumber: {
         type: String
     },
-    系統: {
+    ISSN: {
         type: String
     }, bookName: {
         type: String
@@ -68,7 +68,7 @@ module.exports.getAll = function (callback) {
 }
 
 module.exports.checkissnExistence = function (issn_num, callback) {
-    var ft = { 系統: { $eq: issn_num } };
+    var ft = { ISSN: { $eq: issn_num } };
     JournalInformation.exists(ft, function (err, doc) {
         if (err) {
             console.log(err);
@@ -110,7 +110,7 @@ module.exports.FormatER = function (d) {
         var tmpobj = {};
         tmpobj.id = element.id;
         tmpobj.placeNumber = element.frameNumber;
-        tmpobj.issn = element.系統;
+        tmpobj.issn = element.ISSN;
         tmpobj.mainName = element.bookName;
         tmpobj.stat = element.STAT;
         tmpobj.eSource = element.ES;
@@ -184,10 +184,10 @@ module.exports.findDuplicate0 = function (callback) {
 
 module.exports.findDuplicate1 = function (callback) {
     JournalInformation.aggregate([
-        { "$group": { "_id": "$系統", "count": { "$sum": 1 } } },
+        { "$group": { "_id": "$ISSN", "count": { "$sum": 1 } } },
         { "$match": { "_id": { "$ne": null }, "count": { "$gt": 1 } } },
         { "$sort": { "count": -1 } },
-        { "$project": { "系統": "$_id", "_id": 0 } }
+        { "$project": { "ISSN": "$_id", "_id": 0 } }
     ]).exec((err, SearchResult) => {
         if (err) {
             console.warn(err);
@@ -266,8 +266,8 @@ module.exports.FDpostProcessing1 = function (preP, callback) {
         var tmpA = [];
         function findinner(i) {
             if (i < preP.length) {
-                var ft = { 系統: { $eq: preP[i].系統 } };
-                JournalInformation.find(ft).sort({ 系統: 'descending' }).exec((err, SearchResult) => {
+                var ft = { ISSN: { $eq: preP[i].ISSN } };
+                JournalInformation.find(ft).sort({ ISSN: 'descending' }).exec((err, SearchResult) => {
                     if (err) {
                         console.log(err);
                         callback(null);

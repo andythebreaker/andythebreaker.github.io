@@ -45,7 +45,7 @@ block content
         br
         br
         #issnEXs.ui.info.message
-          p(align='right') 系統
+          p(align='right') ISSN
           br
           p#issnEX(align='right') 存在測試
     .ui.right.attached.rail
@@ -103,8 +103,8 @@ block content
         .middle.aligned.content
           .ui.labeled.input
             .ui.label.violet(style='cursor: pointer;' onclick="var brownstuff=document.querySelectorAll('.ui.label.brown');if(brownstuff){for(var i=0;i<brownstuff.length;i++){brownstuff[i].classList.remove('brown');brownstuff[i].classList.add('violet');}}event.target.parentNode.getElementsByTagName('input')[0].classList.add('tooltargetplugin');event.target.classList.add('brown');event.target.classList.remove('violet')")
-                | 系統
-            input#系統(type='text' placeholder='1234-5678' value=`${EDIT系統}`)
+                | ISSN
+            input#ISSN(type='text' placeholder='1234-5678' value=`${EDITISSN}`)
         .first-border.flex.color-2
           .round.flex
             svg(width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg')
@@ -135,7 +135,7 @@ block content
         .middle.aligned.content
           .ui.labeled.input
             .ui.label.violet(style='cursor: pointer;' onclick="var brownstuff=document.querySelectorAll('.ui.label.brown');if(brownstuff){for(var i=0;i<brownstuff.length;i++){brownstuff[i].classList.remove('brown');brownstuff[i].classList.add('violet');}}event.target.parentNode.getElementsByTagName('input')[0].classList.add('tooltargetplugin');event.target.classList.add('brown');event.target.classList.remove('violet')")
-                | E-系統
+                | E-ISSN
             input#eissn(type='text' placeholder='某些資料...' value=`${EDITeissn}`)
       .item
         a.ui.mini.image

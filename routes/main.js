@@ -231,7 +231,7 @@ router.get('/add_periodical', ensureAuthenticated, function (req, res, next) {
         var_jade_error_msg_gui_text_1: "X",
         var_jade_error_msg_gui_text_2: "X",
         EDITframeNumber: (req.query.EDITframeNumber) ? Base64.decode(req.query.EDITframeNumber) : "",
-        EDIT系統: (req.query.EDIT系統) ? Base64.decode(req.query.EDIT系統) : "",
+        EDITISSN: (req.query.EDITISSN) ? Base64.decode(req.query.EDITISSN) : "",
         EDITbookName: (req.query.EDITbookName) ? Base64.decode(req.query.EDITbookName) : "",
         EDITeissn: (req.query.EDITeissn) ? Base64.decode(req.query.EDITeissn) : "",
         EDITSTAT: (req.query.EDITSTAT) ? Base64.decode(req.query.EDITSTAT) : "",
@@ -263,7 +263,7 @@ router.delete('/mp4upload/del', ensureAuthenticated, function (req, res, next) {
 
 router.post('/add_periodical', ensureAuthenticated, function (req, res, next) {
     var INframeNumber = req.body.frameNumber;
-    var IN系統 = req.body.系統;
+    var INISSN = req.body.ISSN;
     var INbookName = req.body.bookName;
     var INSTAT = req.body.STAT;
     var INES = req.body.ES;
@@ -277,7 +277,7 @@ router.post('/add_periodical', ensureAuthenticated, function (req, res, next) {
     var INhistory = [];
     /*console.log("dats->");
     console.log(INframeNumber);
-    console.log(IN系統);
+    console.log(INISSN);
     console.log(INSTAT);
     console.log(INES);
     console.log(INPS);
@@ -288,7 +288,7 @@ router.post('/add_periodical', ensureAuthenticated, function (req, res, next) {
     console.log(INLIVx);*/
 
     /*var DEFAULTframeNumber = 'Z99999';
-    var DEFAULT系統 = '12345-678910';
+    var DEFAULTISSN = '12345-678910';
     var DEFAULTSTAT = '現刊';
     var DEFAULTES = 'WTF...';
     var DEFAULTPS = 'WTF...';
@@ -336,7 +336,7 @@ router.post('/add_periodical', ensureAuthenticated, function (req, res, next) {
             var newJournalInformation = new JournalInformation({
                 new_date: Date.now(),
                 frameNumber: INframeNumber,
-                系統: IN系統,
+                ISSN: INISSN,
                 bookName: INbookName,
                 STAT: INSTAT,
                 ES: INES,
