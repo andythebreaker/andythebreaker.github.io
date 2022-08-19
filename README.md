@@ -18,8 +18,9 @@ if UR running in windows environment, instead of running `npm start`, use `set A
 
 
 ## ICON
+![image](https://user-images.githubusercontent.com/43373581/185567265-eb94f300-6508-41b0-b0a5-eadb2189bfc5.png)
 
-```
+```xml=
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1"
