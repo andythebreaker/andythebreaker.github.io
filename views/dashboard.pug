@@ -113,7 +113,7 @@ block content
                 li(class=alpha === "duplicate0" ? "active" : "")
                   a(data-toggle='tab' onclick="window.location.href=window.location.href.split( '?' )[0]+`?alpha=duplicate0`")
                     label
-                      h4 架號重複
+                      h4 語言重複
                       //span 資料將展示於下方表格
                 //li.active
                   a(data-toggle='tab' href='#wiz-page-2')
@@ -142,6 +142,7 @@ block content
               button.ui.button.yellow(onclick="$('.Viewbycategory').show();Swal.fire({showDenyButton: true,showCancelButton: false,confirmButtonText: '好',denyButtonText: `取消分析模式(顯示全部資料)`,width: 0.75*vw,title: document.getElementById('VD1').innerHTML,icon: 'info',html: document.getElementById('VD2').innerHTML}).then((result) => {/* Read more about isConfirmed, isDenied below */if (result.isConfirmed) {console.log('no action')} else if (result.isDenied) {window.location.href = '/main/journals';}});$('.Viewbycategory').hide();")
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
                 | #{`顯示重複資料分析 目前分析模式:${(alpha === "duplicate0") ? '語言重複':(alpha === "duplicate1") ? '系統重複':(alpha === "duplicate2") ? '系統重複':(alpha === "duplicate3") ? 'E-系統重複':'全部(無分析)'}模式`}
 =======
                 | #{`顯示重複資料分析 目前分析模式:${(alpha === "duplicate0") ? '架號重複':(alpha === "duplicate1") ? 'ISSN重複':(alpha === "duplicate2") ? 'ISSN重複':(alpha === "duplicate3") ? 'E-ISSN重複':'全部(無分析)'}模式`}
@@ -149,6 +150,9 @@ block content
 =======
                 | #{`顯示重複資料分析 目前分析模式:${(alpha === "duplicate0") ? '語言重複':(alpha === "duplicate1") ? 'ISSN重複':(alpha === "duplicate2") ? 'ISSN重複':(alpha === "duplicate3") ? 'E-ISSN重複':'全部(無分析)'}模式`}
 >>>>>>> parent of 027ec4c (roll back)
+=======
+                | #{`顯示重複資料分析 目前分析模式:${(alpha === "duplicate0") ? '語言重複':(alpha === "duplicate1") ? '系統重複':(alpha === "duplicate2") ? '系統重複':(alpha === "duplicate3") ? 'E-系統重複':'全部(無分析)'}模式`}
+>>>>>>> parent of 9d201c3 (0)
           .row
             // 底下這坨東西是設定表格應用程式的語言，消失吧!
             .select
