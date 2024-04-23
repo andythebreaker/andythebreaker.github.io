@@ -1,4 +1,4 @@
-import create from 'zustand';
+import{ create }from 'zustand';
 
 // Define and export the Zustand store
 export const useBearStore = create((set) => ({
