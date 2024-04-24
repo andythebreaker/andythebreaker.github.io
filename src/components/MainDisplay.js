@@ -10,6 +10,11 @@ import {
   Card,
   Feed,
   Button,
+  Grid,
+  Segment,
+  Divider,
+  Header,
+  Popup,
 } from 'semantic-ui-react'
 import { useFsStore } from '../stores/useFsStore';
 import PlayGround from './PlayGround'
@@ -18,7 +23,7 @@ function MainDisplay() {
   const currentId = useFsStore(state => state.currentId);
   const idAdd = useFsStore(state => state.idAdd);
   const idMinus = useFsStore(state => state.idMinus);
-  const currentName=useFsStore(state=>state.currentName);
+  const currentName = useFsStore(state => state.currentName);
 
   return (
     <div>
@@ -56,12 +61,38 @@ function MainDisplay() {
               <FeedLabel image='/img/bear.jpg' />
               <FeedContent>
                 <FeedDate content='PlayGround' />
-                  <PlayGround></PlayGround>
+                <PlayGround></PlayGround>
               </FeedContent>
             </FeedEvent>
           </Feed>
         </CardContent>
       </Card>
+      <Divider horizontal>
+      <Header as='h4'>
+        <Popup content={currentId} trigger={<Button icon='file alternate outline' />} />
+        {currentName}
+      </Header>
+    </Divider>
+      <Grid columns={3} doubling>
+        <Grid.Column>
+          <Segment>Content</Segment>
+        </Grid.Column>
+        <Grid.Column>
+          <Segment>Content</Segment>
+        </Grid.Column>
+        <Grid.Column>
+          <Segment>Content</Segment>
+        </Grid.Column>
+        <Grid.Column>
+          <Segment>Content</Segment>
+        </Grid.Column>
+        <Grid.Column>
+          <Segment>Content</Segment>
+        </Grid.Column>
+        <Grid.Column>
+          <Segment>Content</Segment>
+        </Grid.Column>
+      </Grid>
     </div>
   );
 }
