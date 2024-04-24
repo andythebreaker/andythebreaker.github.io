@@ -821,7 +821,37 @@ export const getNameById = (id) => {
     return tmp.name;
 };
 
+export const getParentId = (id) => {
+    return dfsParentId(listIndex.repos, id);
+};
+
 export const getObjById = (id) => {
     var tmp = dfs(listIndex.repos, id);
     return tmp;
 };
+
+function dfsParentId(obj, targetId, parentId = null){
+    if (obj.id === targetId) {
+        return parentId;
+    }
+    
+    if ('directories' in obj) {
+        for (var i = 0; i < obj.directories.length; i++) {
+            var result = dfsParentId(obj.directories[i], targetId, obj.id);
+            if (result !== null) {
+                return result;
+            }
+        }
+    }
+    
+    if ('files' in obj) {
+        for (var i = 0; i < obj.files.length; i++) {
+            var result = dfsParentId(obj.files[i], targetId, obj.id);
+            if (result !== null) {
+                return result;
+            }
+        }
+    }
+    
+    return null;
+}

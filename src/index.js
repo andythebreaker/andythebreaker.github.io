@@ -9,7 +9,7 @@ root.render(
   <React.StrictMode>
     <Container>
       <Header as='h1'>andythebreaker's website</Header>
-    </Container>
     <App />
+    </Container>
   </React.StrictMode>
 );
