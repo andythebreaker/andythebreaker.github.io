@@ -9,7 +9,10 @@ import {
     CardContent,
     Card,
     Feed,
+    Grid,
+    Icon,
     Button,
+    Segment,
 } from 'semantic-ui-react'
 import { useFsStore } from '../stores/useFsStore';
 
@@ -35,29 +38,37 @@ function isDirArrayOrFileArray(obj) {
 
 function PlayGround() {
     const currentContent = useFsStore(state => state.currentContent);
-
+    const setId = useFsStore(state => state.setId);
     return (
         <div>
             {isEmptyObject(currentContent) ?
-                <FeedSummary>
-                    'Nothing inside!'
-                </FeedSummary>
+                <Segment>'Nothing inside!'</Segment>
                 : isDirArrayOrFileArray(currentContent) === 'yes, dir' ?
-                    currentContent.directories.map((item, index) => (
-                        <FeedSummary>
-                            {item.name}
-                        </FeedSummary>
-                    ))
+                    <Grid textAlign='center' columns={3} doubling>
+                        {currentContent.directories.map((item, index) => (
+                            <Grid.Column key={index}>
+                                <Button icon labelPosition='right' color='pink' onClick={() => { setId(item.id); }}>
+                                    {item.name}
+                                    <Icon name='right arrow' />
+                                </Button>
+                            </Grid.Column>
+                        ))}
+                    </Grid>
                     : isDirArrayOrFileArray(currentContent) === 'yes, files' ?
-                        currentContent.files.map((item, index) => (
-                            <FeedSummary>
-                                {item.name}
-                            </FeedSummary>
-                        ))
+                        <Grid textAlign='center' columns={3} doubling>
+                            {currentContent.files.map((item, index) => (
+                                <Grid.Column key={index}>
+                                    <Button icon labelPosition='right' color='pink' onClick={() => { setId(item.id); }}>
+                                        {item.name}
+                                        <Icon name='right arrow' />
+                                    </Button>
+                                </Grid.Column>
+                            ))}
+                        </Grid>
                         :
-                        <FeedSummary>
-                            {currentContent.name}
-                        </FeedSummary>
+                        <Segment>
+                            {currentContent.content}
+                        </Segment>
             }
         </div>
     );
